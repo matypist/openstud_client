@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Spinner;
+import android.widget.ArrayAdapter;
+import android.widget.AdapterView;
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
@@ -21,8 +24,13 @@ import com.lithium.leona.openstud.helpers.LayoutHelper;
 
 import net.cachapa.expandablelayout.ExpandableLayout;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.threeten.bp.format.DateTimeFormatter;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import butterknife.BindView;
@@ -30,7 +38,6 @@ import butterknife.ButterKnife;
 import lithium.openstud.driver.core.models.ExamReservation;
 
 public class AvaiableReservationsAdapter extends RecyclerView.Adapter<AvaiableReservationsAdapter.AvailableReservationsHolder> {
-
     private List<ExamReservation> reservations;
     private Activity activity;
     private ReservationAdapterListener ral;
@@ -131,6 +138,8 @@ public class AvaiableReservationsAdapter extends RecyclerView.Adapter<AvaiableRe
         TextView txtReservationPeriod;
         @BindView(R.id.academicYear)
         TextView txtYear;
+        @BindView(R.id.choose_attending_mode)
+        Spinner chooseAttendingModeSpinner;
         @BindView(R.id.place_reservation)
         Button placeButton;
         private Activity activity;
@@ -191,10 +200,65 @@ public class AvaiableReservationsAdapter extends RecyclerView.Adapter<AvaiableRe
             else {
                 txtInfo.setText(infos);
             }
+
+            HashMap<String, String> attendingModesHashMap = new HashMap<>();
+            if (res.getAttendingModesList() == null || res.getAttendingModesList().length() == 0)
+                chooseAttendingModeSpinner.setVisibility(View.GONE);
+            else {
+                chooseAttendingModeSpinner.setVisibility(View.VISIBLE);
+
+                JSONArray attendingModesJsonArray = res.getAttendingModesList();
+
+                ArrayList<String> attendingModesArrayList = new ArrayList<>();
+
+                try {
+                    for (int i = 0; i < attendingModesJsonArray.length(); i++) {
+                        JSONObject scelta = attendingModesJsonArray.getJSONObject(i);
+
+                        if(scelta != null) {
+                            String attendingModeTypeDescription;
+                            try {
+                                attendingModeTypeDescription = scelta.getString("descrizioneTipoEsame");
+
+                                attendingModesArrayList.add(attendingModeTypeDescription);
+                            } catch(JSONException ex) {
+                                continue;
+                            }
+
+                            try {
+                                attendingModesHashMap.put(attendingModeTypeDescription, scelta.getString("tipoEsame"));
+                            } catch(JSONException ex) {
+                                attendingModesArrayList.remove(attendingModeTypeDescription);
+                            }
+                        }
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                ArrayAdapter<String> adapterSpinner = new ArrayAdapter<>(this.activity, android.R.layout.simple_spinner_item, attendingModesArrayList);
+                adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+                chooseAttendingModeSpinner.setAdapter(adapterSpinner);
+            }
+
+            final HashMap<String, String> finalAttendingModesHashMap = new HashMap<>(attendingModesHashMap);
+            chooseAttendingModeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    String attendingModeTypeDescription = (String) parent.getItemAtPosition(position);
+
+                    res.setAttendingModeType(finalAttendingModesHashMap.get(attendingModeTypeDescription));
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {}
+            });
+
             if (existActiveReservations(res)) {
                 setPlaceButtonEnabled(false, true);
-            } else if (!ClientHelper.canPlaceReservation(res)) setPlaceButtonEnabled(false, false);
-            else setPlaceButtonEnabled(true, false);
+            } else setPlaceButtonEnabled(ClientHelper.canPlaceReservation(res), false);
+
             placeButton.setOnClickListener(v -> new Thread(() -> {
                 if (ral.placeReservation(res))
                     activity.runOnUiThread(() -> setPlaceButtonEnabled(false, true));
