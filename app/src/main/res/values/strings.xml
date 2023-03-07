@@ -78,7 +78,7 @@
     <string name="reservation_error">Can\'t place the reservation. Try again later</string>
     <string name="reservation_ok">Reservation placed successfully</string>
     <string name="already_placed_reservation">You already placed a reservation for this session!</string>
-    <string name="fork_telegram">Telegram Channel</string>
+    <string name="fork_telegram">Telegram channel</string>
     <string name="fork_github">Source code</string>
     <string name="fork_maintainer">Maintainer</string>
     <string name="fork_maintainer_email_address">matypist@sapienzastudents.net</string>

@@ -72,7 +72,7 @@
     <string name="reservation_error">Impossibile creare la prenotazione. Riprova più tardi</string>
     <string name="reservation_ok">Prenotazione creata con successo</string>
     <string name="already_placed_reservation">Hai già fatto una prenotazione per questa sessione!</string>
-    <string name="fork_telegram">Canale Telegram</string>
+    <string name="fork_telegram">Canale telegram</string>
     <string name="fork_github">Codice sorgente</string>
     <string name="fork_maintainer">Maintainer</string>
     <string name="fork_maintainer_email_address">matypist@sapienzastudents.net</string>
