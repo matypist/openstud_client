@@ -147,7 +147,7 @@
                         card_view:layout_constraintStart_toStartOf="parent"
                         card_view:layout_constraintTop_toTopOf="parent" />
 
-                    <androidx.appcompat.widget.AppCompatSpinner
+                    <Spinner
                             android:id="@+id/choose_attending_mode"
                             android:layout_width="174dp"
                             android:layout_height="37dp"
@@ -158,6 +158,9 @@
                             android:layout_weight="0.5"
                             android:drawablePadding="6dp"
                             android:textSize="14sp"
+                            android:textColor="?attr/primaryTextColor"
+                            android:popupBackground="?attr/backgroundCardColor"
+                            android:theme="?attr/SpinnerTheme"
                             card_view:layout_constraintBottom_toBottomOf="parent"
                             card_view:layout_constraintEnd_toEndOf="parent"
                             card_view:layout_constraintHorizontal_bias="0"

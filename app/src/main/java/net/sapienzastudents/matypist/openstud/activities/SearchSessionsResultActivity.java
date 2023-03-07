@@ -21,7 +21,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import net.sapienzastudents.matypist.openstud.R;
-import net.sapienzastudents.matypist.openstud.adapters.AvaiableReservationsAdapter;
+import net.sapienzastudents.matypist.openstud.adapters.AvailableReservationsAdapter;
 import net.sapienzastudents.matypist.openstud.helpers.ThemeEngine;
 import net.sapienzastudents.matypist.openstud.data.InfoManager;
 import net.sapienzastudents.matypist.openstud.helpers.ClientHelper;
@@ -61,7 +61,7 @@ public class SearchSessionsResultActivity extends BaseDataActivity {
     TextView emptyText;
     @BindView(R.id.searchLayout)
     ConstraintLayout layout;
-    private AvaiableReservationsAdapter adapter;
+    private AvailableReservationsAdapter adapter;
     private LocalDateTime lastUpdate;
     private ExamDoable exam;
     private List<ExamReservation> reservations;
@@ -71,7 +71,7 @@ public class SearchSessionsResultActivity extends BaseDataActivity {
 
     @OnClick(R.id.empty_button_reload)
     public void OnClick(View v) {
-        refreshAvaiableReservations();
+        refreshAvailableReservations();
     }
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,13 +103,13 @@ public class SearchSessionsResultActivity extends BaseDataActivity {
         rv.setHasFixedSize(true);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         rv.setLayoutManager(llm);
-        adapter = new AvaiableReservationsAdapter(this, reservations, activeReservations, this::confirmReservation, rv);
+        adapter = new AvailableReservationsAdapter(this, reservations, activeReservations, this::confirmReservation, rv);
         rv.setAdapter(adapter);
         int refreshColorId = ThemeEngine.getSpinnerColorId(this);
         swipeRefreshLayout.setColorSchemeResources(refreshColorId, refreshColorId, refreshColorId);
         swipeRefreshLayout.setProgressBackgroundColorSchemeColor(ThemeEngine.resolveColorFromAttribute(this, R.attr.SwipeSpinnerBackgroundColor, R.color.white));
-        swipeRefreshLayout.setOnRefreshListener(this::refreshAvaiableReservations);
-        if (savedInstanceState == null) refreshAvaiableReservations();
+        swipeRefreshLayout.setOnRefreshListener(this::refreshAvailableReservations);
+        if (savedInstanceState == null) refreshAvailableReservations();
         else {
             Gson gson = new Gson();
             List<ExamReservation> saved = gson.fromJson(savedInstanceState.getString("reservations", "null"), new TypeToken<List<ExamReservation>>() {
@@ -135,7 +135,7 @@ public class SearchSessionsResultActivity extends BaseDataActivity {
             }
             if (pair.getRight() != null) ClientHelper.createCustomTab(this, pair.getRight());
             else {
-                refreshAvaiableReservations();
+                refreshAvailableReservations();
                 h.sendEmptyMessage(ClientHelper.Status.PLACE_RESERVATION_OK.getValue());
                 return true;
             }
@@ -158,10 +158,10 @@ public class SearchSessionsResultActivity extends BaseDataActivity {
         LocalDateTime time = getTimer();
         if (firstStart) firstStart = false;
         else if (time == null || Duration.between(time, LocalDateTime.now()).toMinutes() > 30)
-            refreshAvaiableReservations();
+            refreshAvailableReservations();
     }
 
-    private void refreshAvaiableReservations() {
+    private void refreshAvailableReservations() {
         setRefreshing(true);
         setButtonReloadStatus(false);
         Activity activity = this;
@@ -268,7 +268,7 @@ public class SearchSessionsResultActivity extends BaseDataActivity {
         public void handleMessage(Message msg) {
             SearchSessionsResultActivity activity = mActivity.get();
             if (activity != null) {
-                OnClickListener listener = v -> new Thread(activity::refreshAvaiableReservations).start();
+                OnClickListener listener = v -> new Thread(activity::refreshAvailableReservations).start();
                 if (msg.what == ClientHelper.Status.CONNECTION_ERROR.getValue()) {
                     LayoutHelper.createActionSnackBar(activity.layout, R.string.connection_error, R.string.retry, Snackbar.LENGTH_LONG, listener);
                 } else if (msg.what == ClientHelper.Status.INVALID_RESPONSE.getValue()) {

@@ -37,14 +37,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import matypist.openstud.driver.core.models.ExamReservation;
 
-public class AvaiableReservationsAdapter extends RecyclerView.Adapter<AvaiableReservationsAdapter.AvailableReservationsHolder> {
+public class AvailableReservationsAdapter extends RecyclerView.Adapter<AvailableReservationsAdapter.AvailableReservationsHolder> {
     private List<ExamReservation> reservations;
     private Activity activity;
     private ReservationAdapterListener ral;
     private List<ExamReservation> activeReservations;
     private RecyclerView rv;
     private int lastExpandedItem = -1;
-    public AvaiableReservationsAdapter(Activity activity, List<ExamReservation> reservations, List<ExamReservation> activeReservations, ReservationAdapterListener ral, RecyclerView recyclerView) {
+    public AvailableReservationsAdapter(Activity activity, List<ExamReservation> reservations, List<ExamReservation> activeReservations, ReservationAdapterListener ral, RecyclerView recyclerView) {
         this.reservations = reservations;
         this.activity = activity;
         this.ral = ral;
@@ -65,7 +65,7 @@ public class AvaiableReservationsAdapter extends RecyclerView.Adapter<AvaiableRe
     @NonNull
     @Override
     public AvailableReservationsHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(activity).inflate(R.layout.item_row_avaiable_reservation, parent, false);
+        View view = LayoutInflater.from(activity).inflate(R.layout.item_row_available_reservation, parent, false);
         AvailableReservationsHolder holder = new AvailableReservationsHolder(view);
         holder.setActivity(activity);
         return holder;
@@ -201,6 +201,8 @@ public class AvaiableReservationsAdapter extends RecyclerView.Adapter<AvaiableRe
                 txtInfo.setText(infos);
             }
 
+            LayoutHelper.setColorSrcAtop(chooseAttendingModeSpinner.getBackground(), LayoutHelper.getColorByAttr(activity, R.attr.primaryTextColor, android.R.color.darker_gray));
+
             HashMap<String, String> attendingModesHashMap = new HashMap<>();
             if (res.getAttendingModesList() == null || res.getAttendingModesList().length() == 0)
                 chooseAttendingModeSpinner.setVisibility(View.GONE);
@@ -236,7 +238,7 @@ public class AvaiableReservationsAdapter extends RecyclerView.Adapter<AvaiableRe
                     e.printStackTrace();
                 }
 
-                ArrayAdapter<String> adapterSpinner = new ArrayAdapter<>(this.activity, android.R.layout.simple_spinner_item, attendingModesArrayList);
+                ArrayAdapter<String> adapterSpinner = new ArrayAdapter<>(activity, android.R.layout.simple_spinner_item, attendingModesArrayList);
                 adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
                 chooseAttendingModeSpinner.setAdapter(adapterSpinner);
@@ -247,6 +249,8 @@ public class AvaiableReservationsAdapter extends RecyclerView.Adapter<AvaiableRe
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     String attendingModeTypeDescription = (String) parent.getItemAtPosition(position);
+
+                    ((TextView) parent.getChildAt(position)).setTextColor(LayoutHelper.getColorByAttr(activity, R.attr.primaryTextColor, android.R.color.darker_gray));
 
                     res.setAttendingModeType(finalAttendingModesHashMap.get(attendingModeTypeDescription));
                 }
