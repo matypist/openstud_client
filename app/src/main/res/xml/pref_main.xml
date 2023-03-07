@@ -6,7 +6,7 @@
         android:title="@string/pref_title_general"
         app:iconSpaceReserved="false">
         <CheckBoxPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="@string/key_exam_date"
             android:summary="@string/show_exam_date_description"
             android:title="@string/show_exam_date"
