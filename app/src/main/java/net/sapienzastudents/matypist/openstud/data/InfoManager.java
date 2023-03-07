@@ -231,8 +231,8 @@ public class InfoManager {
         if (os == null) return null;
         Gson gson = new Gson();
         Map<String, List<Lesson>> newTimetable = new HashMap<>();
-        if (PreferenceManager.isLessonEnabled(context))
-            newTimetable = os.getTimetable(os.getExamsDoable());
+        /* if (PreferenceManager.isLessonEnabled(context))
+            newTimetable = os.getTimetable(os.getExamsDoable()); */
         List<matypist.openstud.driver.core.models.Event> newEvents = os.getCalendarEvents(student);
         if (newEvents == null) return null;
         if (newTimetable != null && !newTimetable.isEmpty())

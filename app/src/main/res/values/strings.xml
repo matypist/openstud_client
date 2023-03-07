@@ -161,7 +161,7 @@
     <string name="filter_calendar_description">Choose the lessons that you want to be shown in the calendar</string>
     <string name="filter_lessons">Filter lessons</string>
     <string name="enable_lessons">Add lessons automatically</string>
-    <string name="key_enable_lesson" translatable="false">key_enable_lesson</string>
+    <!-- <string name="key_enable_lesson" translatable="false">key_enable_lesson</string> -->
     <string name="enable_lessons_description">Show lessons for non-passed exams in the calendar using the Sapienza\'s database</string>
     <string name="lesson_notification">Lesson timetable can be enabled in the settings</string>
     <string name="ok" translatable="false">OK</string>

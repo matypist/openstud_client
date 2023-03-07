@@ -28,14 +28,14 @@ public class ContributorsActivity extends MaterialAboutActivity {
         MaterialAboutCard.Builder appCardBuilder3 = new MaterialAboutCard.Builder();
         MaterialAboutCard.Builder appCardBuilder4 = new MaterialAboutCard.Builder();
         MaterialAboutCard.Builder appCardBuilder5 = new MaterialAboutCard.Builder();
-        MaterialAboutCard.Builder appCardBuilder6 = new MaterialAboutCard.Builder();
+        // MaterialAboutCard.Builder appCardBuilder6 = new MaterialAboutCard.Builder();
         buildContributor(context, appCardBuilder1, "Leonardo Sarra", getResources().getString(R.string.author), null, "https://github.com/LithiumSR/");
         buildContributor(context, appCardBuilder2, "Luigi Russo", getResources().getString(R.string.developer), null, "https://github.com/lrusso96");
         buildContributor(context, appCardBuilder3, "Leonardo Razovic", "Logo designer", "https://www.twitter.com/lrazovic", null);
         buildContributor(context, appCardBuilder4, "Valerio Silvestro", "Tester", null, null);
         buildContributor(context, appCardBuilder5, "Ugo Possenti", "Concept designer", "https://twitter.com/MEPoss", null);
-        buildContributor(context, appCardBuilder6, "SapienzaApps", getResources().getString(R.string.sapienzaapps), null, null);
-        return new MaterialAboutList(appCardBuilder1.build(), appCardBuilder2.build(), appCardBuilder6.build(), appCardBuilder3.build(), appCardBuilder4.build(), appCardBuilder5.build());
+        // buildContributor(context, appCardBuilder6, "SapienzaApps", getResources().getString(R.string.sapienzaapps), null, null);
+        return new MaterialAboutList(appCardBuilder1.build(), appCardBuilder2.build(), /*appCardBuilder6.build(),*/ appCardBuilder3.build(), appCardBuilder4.build(), appCardBuilder5.build());
     }
 
     @Nullable

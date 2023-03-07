@@ -157,13 +157,13 @@ public class SettingsPrefActivity extends AppCompatActivity {
                 }
                 return true;
             });
-            Preference enableLesson = findPreference(getString(R.string.key_enable_lesson));
+            /* Preference enableLesson = findPreference(getString(R.string.key_enable_lesson));
             enableLesson.setOnPreferenceChangeListener((preference, newValue) -> {
                 Boolean enable = (Boolean) newValue;
                 if (enable) LayoutHelper.createCalendarNotification(activity, alertDialogTheme);
                 PreferenceManager.setCalendarNotificationEnabled(getContext(), false);
                 return true;
-            });
+            }); */
             EditTextPreference laude = findPreference(getString(R.string.key_default_laude));
             laude.setOnBindEditTextListener(editText -> {
                 editText.setTextColor(ThemeEngine.getPrimaryTextColor(activity));

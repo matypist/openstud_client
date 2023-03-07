@@ -133,7 +133,7 @@ public class CalendarActivity extends BaseDataActivity implements DialogInterfac
         drawer = LayoutHelper.applyDrawer(this, toolbar, student);
         toolbar.setNavigationOnClickListener(v -> onBackPressed());
         lessonOptionsEnabled = PreferenceManager.isLessonOptionEnabled(this);
-        lessonsEnabled = PreferenceManager.isLessonEnabled(this);
+        // lessonsEnabled = PreferenceManager.isLessonEnabled(this);
         compactCalendarView.setLocale(TimeZone.getDefault(), Locale.getDefault());
         compactCalendarView.setShouldDrawDaysHeader(true);
         compactCalendarView.setListener(new CompactCalendarView.CompactCalendarViewListener() {
@@ -494,10 +494,10 @@ public class CalendarActivity extends BaseDataActivity implements DialogInterfac
         super.onResume();
         LocalDateTime time = getTimer();
         if (firstStart) firstStart = false;
-        else if (lessonsEnabled != PreferenceManager.isLessonEnabled(this)) {
+        /* else if (lessonsEnabled != PreferenceManager.isLessonEnabled(this)) {
             refreshEvents();
             lessonsEnabled = !lessonsEnabled;
-        } else if (lessonOptionsEnabled != PreferenceManager.isLessonOptionEnabled(this)) {
+        } */ else if (lessonOptionsEnabled != PreferenceManager.isLessonOptionEnabled(this)) {
             if (adapter_lessons != null) adapter_lessons.notifyDataSetChanged();
             lessonOptionsEnabled = !lessonOptionsEnabled;
         } else if (time == null || Duration.between(time, LocalDateTime.now()).toMinutes() > 240)

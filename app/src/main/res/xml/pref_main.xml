@@ -35,12 +35,12 @@
     <PreferenceCategory
         android:title="@string/pref_title_lessons"
         app:iconSpaceReserved="false">
-        <CheckBoxPreference
+        <!--<CheckBoxPreference
             android:defaultValue="false"
             android:key="@string/key_enable_lesson"
             android:summary="@string/enable_lessons_description"
             android:title="@string/enable_lessons"
-            app:iconSpaceReserved="false" />
+            app:iconSpaceReserved="false" />-->
         <CheckBoxPreference
             android:defaultValue="false"
             android:key="@string/key_options_lesson"

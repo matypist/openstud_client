@@ -29,12 +29,12 @@ public class PreferenceManager {
         }
     }
 
-    public static boolean isLessonEnabled(Context context) {
+    /* public static boolean isLessonEnabled(Context context) {
         setupSharedPreferences(context);
         synchronized (PreferenceManager.class) {
             return pref.getBoolean(context.getResources().getString(R.string.key_enable_lesson), false);
         }
-    }
+    } */
 
     public static boolean isBiometricsEnabled(Context context) {
         if (!BIOMETRIC_FEATURE_AVAILABLE) return false;
