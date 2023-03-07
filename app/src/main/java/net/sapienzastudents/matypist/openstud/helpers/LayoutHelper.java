@@ -162,7 +162,7 @@ public class LayoutHelper {
         PrimaryDrawerItem exams = new PrimaryDrawerItem().withIdentifier(Selection.EXAMS.getValue()).withIcon(R.drawable.ic_baseline_class).withName(R.string.exams).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.EXAMS.getValue()).withIconTintingEnabled(true);
         PrimaryDrawerItem stats = new PrimaryDrawerItem().withIdentifier(Selection.STATS.getValue()).withIcon(R.drawable.ic_timeline_black_24dp).withName(R.string.stats).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.STATS.getValue()).withIconTintingEnabled(true);
         PrimaryDrawerItem calendar = new PrimaryDrawerItem().withIdentifier(Selection.CALENDAR.getValue()).withIcon(R.drawable.ic_date_range_black).withName(R.string.calendar).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.CALENDAR.getValue()).withIconTintingEnabled(true);
-        PrimaryDrawerItem classrooms = new PrimaryDrawerItem().withIdentifier(Selection.CLASSROOMS.getValue()).withIcon(R.drawable.ic_location_city_black_24dp).withName(R.string.classrooms).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.CLASSROOMS.getValue()).withIconTintingEnabled(true);
+        // PrimaryDrawerItem classrooms = new PrimaryDrawerItem().withIdentifier(Selection.CLASSROOMS.getValue()).withIcon(R.drawable.ic_location_city_black_24dp).withName(R.string.classrooms).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.CLASSROOMS.getValue()).withIconTintingEnabled(true);
         PrimaryDrawerItem events = new PrimaryDrawerItem().withIdentifier(Selection.EVENTS.getValue()).withIcon(R.drawable.ic_stage_24dp).withName(R.string.events).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.EVENTS.getValue()).withIconTintingEnabled(true);
         PrimaryDrawerItem tax = new PrimaryDrawerItem().withIdentifier(Selection.TAX.getValue()).withIcon(R.drawable.ic_baseline_payment).withName(R.string.payments).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.TAX.getValue()).withIconTintingEnabled(true);
         PrimaryDrawerItem news = new PrimaryDrawerItem().withIdentifier(Selection.NEWS.getValue()).withIcon(R.drawable.ic_newspaper).withName(R.string.news).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.NEWS.getValue()).withIconTintingEnabled(true);
@@ -174,7 +174,7 @@ public class LayoutHelper {
                 .withActivity(activity)
                 .withToolbar(toolbar)
                 .addDrawerItems(
-                        profile, exams, stats, calendar, news, events, classrooms, tax,
+                        profile, exams, stats, calendar, news, events, /*classrooms,*/ tax,
                         new DividerDrawerItem(),
                         settings, about, exit
                 ).withOnDrawerListener(ddl)

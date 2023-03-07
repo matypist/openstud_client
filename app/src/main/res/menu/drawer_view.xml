@@ -18,10 +18,10 @@
                 android:id="@+id/calendar_menu"
                 android:icon="@drawable/ic_date_range_black"
                 android:title="@string/calendar" />
-            <item
+            <!---<item
                 android:id="@+id/classrooms_menu"
                 android:icon="@drawable/ic_location_city_black_24dp"
-                android:title="@string/classrooms" />
+                android:title="@string/classrooms" />-->
             <item
                 android:id="@+id/payments_menu"
                 android:icon="@drawable/ic_baseline_payment"
