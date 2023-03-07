@@ -33,11 +33,11 @@ public class AboutActivity extends MaterialAboutActivity {
     protected MaterialAboutList getMaterialAboutList(@NonNull Context context) {
         MaterialAboutCard.Builder appCardBuilder = new MaterialAboutCard.Builder();
         buildApp(context, appCardBuilder);
-        MaterialAboutCard.Builder authorCardBuilder = new MaterialAboutCard.Builder();
-        buildAuthor(context, authorCardBuilder);
+        MaterialAboutCard.Builder maintainerCardBuilder = new MaterialAboutCard.Builder();
+        buildMaintainer(context, maintainerCardBuilder);
         MaterialAboutCard.Builder miscCardBuilder = new MaterialAboutCard.Builder();
         buildMisc(context, miscCardBuilder);
-        return new MaterialAboutList(appCardBuilder.build(), miscCardBuilder.build(), authorCardBuilder.build());
+        return new MaterialAboutList(appCardBuilder.build(), miscCardBuilder.build(), maintainerCardBuilder.build());
     }
 
     @Nullable
@@ -62,7 +62,7 @@ public class AboutActivity extends MaterialAboutActivity {
 
     }
 
-    private void buildAuthor(Context context, MaterialAboutCard.Builder authorCardBuilder) {
+    private void buildMaintainer(Context context, MaterialAboutCard.Builder maintainerCardBuilder) {
         int tintColor = ThemeEngine.getPrimaryTextColor(this);
         Drawable person = ContextCompat.getDrawable(context, R.drawable.ic_person_outline_black);
         Drawable email = ContextCompat.getDrawable(context, R.drawable.ic_email_black);
@@ -72,23 +72,24 @@ public class AboutActivity extends MaterialAboutActivity {
                 .sizeDp(22);
         LayoutHelper.setColorSrcAtop(email, tintColor);
         LayoutHelper.setColorSrcAtop(person, tintColor);
-        authorCardBuilder.title(R.string.author);
-        authorCardBuilder.addItem(new MaterialAboutActionItem.Builder()
-                .text("Leonardo Sarra")
-                .icon(person)
-                .build())
+
+        maintainerCardBuilder.title(R.string.fork_maintainer);
+        maintainerCardBuilder.addItem(new MaterialAboutActionItem.Builder()
+                        .text("Matteo Collica")
+                        .icon(person)
+                        .build())
                 .addItem(ConvenienceBuilder.createEmailItem(context, email,
-                        getString(R.string.send_email), true, getString(R.string.email_address), getString(R.string.question_concerning_openstud)))
+                        getString(R.string.send_email), true, getString(R.string.fork_maintainer_email_address), getString(R.string.question_concerning_openstud)))
                 .addItem(new MaterialAboutActionItem.Builder()
                         .text(R.string.send_message)
                         .icon(telegram)
                         .setOnClickAction(() -> {
                             try {
-                                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tg://resolve?domain=Lithium_3"));
+                                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tg://resolve?domain=Matypist"));
                                 startActivity(intent);
                             } catch (ActivityNotFoundException e) {
                                 e.printStackTrace();
-                                ClientHelper.createCustomTab(context, "https://t.me/lithium_3");
+                                ClientHelper.createCustomTab(context, "https://t.me/Matypist");
                             }
                         }).build()).build();
     }
@@ -112,7 +113,7 @@ public class AboutActivity extends MaterialAboutActivity {
                 .addItem(new MaterialAboutActionItem.Builder()
                         .text(R.string.fork_github)
                         .icon(github)
-                        .setOnClickAction(() -> ClientHelper.createCustomTab(this, "https://www.github.com/lithiumSR/openstud_client"))
+                        .setOnClickAction(() -> ClientHelper.createCustomTab(this, "https://www.github.com/matypist/openstud_client"))
                         .build())
                 .addItem(new MaterialAboutActionItem.Builder()
                         .text(R.string.contributors)

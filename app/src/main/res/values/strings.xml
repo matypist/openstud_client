@@ -79,9 +79,10 @@
     <string name="reservation_ok">Reservation placed successfully</string>
     <string name="already_placed_reservation">You already placed a reservation for this session!</string>
     <string name="fork_github">Source code</string>
-    <string name="author">Author</string>
+    <string name="fork_maintainer">Maintainer</string>
+    <string name="fork_maintainer_email_address">matypist@sapienzastudents.net</string>
     <string name="version">Version</string>
-    <string name="email_address">leonardosarra@outlook.com</string>
+    <string name="author">Author</string>
     <string name="send_email">Send an email</string>
     <string name="question_concerning_openstud">Any question?</string>
     <string name="open_source_libs">Open source libraries</string>
@@ -122,6 +123,7 @@
     <string name="closed_reservation">You can\'t delete the reservation after the deadline!</string>
     <string name="info_extra_reservation">Info</string>
     <string name="logo_designer">Logo and icon</string>
+    <string name="github_profile" translatable="false">GitHub profile</string>
     <string name="twitter" translatable="false">Twitter</string>
     <string name="website" translatable="false">Website</string>
     <string name="not_enrolled">Not enrolled</string>
@@ -200,7 +202,7 @@
     <string name="no_pdf_app">No application found that can handle PDF files!</string>
     <string name="news">News</string>
     <string name="no_news_found">No news was found</string>
-    <string name="sapienzaaps">GOMP API</string>
+    <string name="sapienzaapps">GOMP API</string>
     <string name="infostud_maintenance">InfoStud is in maintenance</string>
     <string name="personal_identifier">Social security number</string>
     <string name="events">Events</string>

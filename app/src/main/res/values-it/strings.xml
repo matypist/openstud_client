@@ -73,9 +73,10 @@
     <string name="reservation_ok">Prenotazione creata con successo</string>
     <string name="already_placed_reservation">Hai già fatto una prenotazione per questa sessione!</string>
     <string name="fork_github">Codice sorgente</string>
+    <string name="fork_maintainer">Maintainer</string>
+    <string name="fork_maintainer_email_address">matypist@sapienzastudents.net</string>
+    <string name="version">Version</string>
     <string name="author">Autore</string>
-    <string name="version">Versione</string>
-    <string name="email_address">leonardosarra@outlook.com</string>
     <string name="question_concerning_openstud">Hai qualche domanda?</string>
     <string name="open_source_libs">Librerie open source</string>
     <string name="no_sessions_found">Nessun appello trovato</string>
@@ -181,7 +182,7 @@
     <string name="no_pdf_app">Nessuna applicazione trovata per visualizzare i file PDF!</string>
     <string name="news">Notizie</string>
     <string name="no_news_found">Nessuna notizia trovata</string>
-    <string name="sapienzaaps">API per GOMP </string>
+    <string name="sapienzaapps">API per GOMP </string>
     <string name="infostud_maintenance">InfoStud è momentaneamente in manutenzione</string>
     <string name="personal_identifier">Codice fiscale</string>
     <string name="events">Eventi</string>
