@@ -80,13 +80,13 @@ dependencies {
     implementation "com.mikepenz:materialdrawer:6.1.2"
     implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
     implementation 'com.github.GrenderG:Toasty:1.4.2'
-    implementation 'org.threeten:threetenbp:1.4.1'
+    implementation 'org.threeten:threetenbp:1.4.4'
     implementation 'com.github.LithiumSR:CompactCalendarView:3.1'
     implementation 'com.karumi:dexter:6.2.0'
     implementation 'com.github.lithiumsr:ExpandableLayout:2.9.5'
     implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation "androidx.annotation:annotation:1.1.0"
