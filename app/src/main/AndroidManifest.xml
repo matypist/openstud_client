@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.lithium.leona.openstud">
+    package="net.sapienzastudents.matypist.openstud">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -25,13 +25,13 @@
         android:theme="@style/AppThemeLight"
         android:hardwareAccelerated="true">
         <activity
-            android:name=".activities.WebViewActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.WebViewActivity"
             android:label="@string/title_activity_web_view"
             android:theme="@style/NoActionBarAppLightTheme"
             android:configChanges="orientation|screenSize"/>
 
         <receiver
-            android:name=".widgets.ExamsWidget"
+            android:name="net.sapienzastudents.matypist.openstud.widgets.ExamsWidget"
             android:label="@string/exam_widget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -42,15 +42,15 @@
                 android:resource="@xml/exams_widget_info" />
         </receiver>
 
-        <activity android:name=".widgets.ExamsWidgetConfigureActivity">
+        <activity android:name="net.sapienzastudents.matypist.openstud.widgets.ExamsWidgetConfigureActivity">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.AddCustomCourseActivity" />
-        <activity android:name=".activities.CustomCourseListActivity" />
+        <activity android:name="net.sapienzastudents.matypist.openstud.activities.AddCustomCourseActivity" />
+        <activity android:name="net.sapienzastudents.matypist.openstud.activities.CustomCourseListActivity" />
         <activity
-            android:name=".activities.LauncherActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.LauncherActivity"
             android:noHistory="true"
             android:theme="@style/LauncherTheme">
             <intent-filter>
@@ -61,27 +61,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.LoginActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.LoginActivity"
             android:theme="@style/LoginTheme" />
         <activity
-            android:name=".activities.ProfileActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.ProfileActivity"
             android:theme="@style/NoActionBarAppLightTheme" />
         <activity
-            android:name=".activities.PaymentsActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.PaymentsActivity"
             android:theme="@style/NoActionBarAppLightTheme" />
         <activity
-            android:name=".activities.ExamsActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.ExamsActivity"
             android:theme="@style/NoActionBarAppLightTheme" />
         <activity
-            android:name=".activities.SearchSessionsResultActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.SearchSessionsResultActivity"
             android:theme="@style/NoActionBarAppLightTheme" />
         <activity
-            android:name=".activities.CalendarActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.CalendarActivity"
             android:theme="@style/NoActionBarAppLightTheme" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.lithium.leona.openstud.provider"
+            android:authorities="net.sapienzastudents.matypist.openstud.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -90,26 +90,26 @@
         </provider>
 
         <activity
-            android:name=".activities.AboutActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.AboutActivity"
             android:theme="@style/AppTheme.MaterialAboutActivityLight" />
         <activity
-            android:name=".activities.ContributorsActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.ContributorsActivity"
             android:theme="@style/AppTheme.MaterialAboutActivityLight" />
         <activity
-            android:name=".activities.SettingsPrefActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.SettingsPrefActivity"
             android:theme="@style/NoActionBarAppLightTheme" />
         <activity
-            android:name=".activities.StatsActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.StatsActivity"
             android:theme="@style/NoActionBarAppLightTheme" />
         <activity
-            android:name=".activities.SearchClassroomActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.SearchClassroomActivity"
             android:theme="@style/NoActionBarAppLightTheme" />
         <activity
-            android:name=".activities.ClassroomTimetableActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.ClassroomTimetableActivity"
             android:theme="@style/NoActionBarAppLightTheme" />
 
         <receiver
-            android:name=".widgets.GradesWidget"
+            android:name="net.sapienzastudents.matypist.openstud.widgets.GradesWidget"
             android:label="@string/stats_widget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -121,14 +121,14 @@
         </receiver>
 
         <activity
-            android:name=".activities.NewsActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.NewsActivity"
             android:theme="@style/NoActionBarAppLightTheme" />
         <activity
-            android:name=".activities.EventsActivity"
+            android:name="net.sapienzastudents.matypist.openstud.activities.EventsActivity"
             android:theme="@style/NoActionBarAppLightTheme" />
 
         <service
-            android:name=".widgets.ExamsService"
+            android:name="net.sapienzastudents.matypist.openstud.widgets.ExamsService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
     </application>
 

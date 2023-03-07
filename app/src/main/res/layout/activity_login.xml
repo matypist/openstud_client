@@ -16,7 +16,7 @@
         android:clickable="true"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        tools:context=".activities.LoginActivity">
+        tools:context="net.sapienzastudents.matypist.openstud.activities.LoginActivity">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/studentIdContainer"

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="?attr/backgroundColor"
     android:orientation="vertical"
-    tools:context=".activities.StatsActivity">
+    tools:context="net.sapienzastudents.matypist.openstud.activities.StatsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

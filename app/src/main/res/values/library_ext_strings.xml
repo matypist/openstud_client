@@ -64,15 +64,15 @@
 
     <!-- OpenStud Driver section -->
     <string name="define_int_openstud_driver" />
-    <string name="library_openstud_driver_author">Leonardo Sarra</string>
-    <string name="library_openstud_driver_authorWebsite">https://github.com/lithiumsr</string>
+    <string name="library_openstud_driver_author">M. Collica (maintainer), L. Sarra (author)</string>
+    <string name="library_openstud_driver_authorWebsite">https://github.com/matypist</string>
     <string name="library_openstud_driver_libraryName">OpenStud Driver</string>
     <string name="library_openstud_driver_libraryDescription">A Java library that provides an easy way to obtain infos from Sapienza University\'s Infostud</string>
-    <string name="library_openstud_driver_libraryWebsite">https://github.com/lithiumsr/openstud_driver</string>
-    <string name="library_openstud_driver_respositoryLink">https://github.com/lithiumsr/openstud_driver</string>
-    <string name="library_openstud_driver_libraryVersion">0.55.0</string>
+    <string name="library_openstud_driver_libraryWebsite">https://github.com/matypist/openstud_driver</string>
+    <string name="library_openstud_driver_respositoryLink">https://github.com/matypist/openstud_driver</string>
+    <string name="library_openstud_driver_libraryVersion">0.60.2</string>
     <string name="library_openstud_driver_isOpenSource">true</string>
-    <string name="library_openstud_driver_classPath">lithium.openstud.driver.core.Openstud</string>
+    <string name="library_openstud_driver_classPath">matypist.openstud.driver.core.Openstud</string>
 
     <!-- MaterialSearchBar section -->
     <string name="define_int_searchbar" />

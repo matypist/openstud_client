@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
-    android:configure="com.lithium.leona.openstud.widgets.ExamsWidgetConfigureActivity"
+    android:configure="net.sapienzastudents.matypist.openstud.widgets.ExamsWidgetConfigureActivity"
     android:initialKeyguardLayout="@layout/exams_events_widget"
     android:initialLayout="@layout/exams_events_widget"
     android:minWidth="250dp"
