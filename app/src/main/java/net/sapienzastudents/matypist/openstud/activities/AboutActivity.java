@@ -126,7 +126,7 @@ public class AboutActivity extends MaterialAboutActivity {
                 .addItem(new MaterialAboutActionItem.Builder()
                         .text(R.string.fork_telegram_group)
                         .icon(telegram_group)
-                        .setOnClickAction(() -> ClientHelper.createCustomTab(this, "https://telegram.me/OpenStud"))
+                        .setOnClickAction(() -> ClientHelper.createCustomTab(this, "https://osgroup.sapienzastudents.net"))
                         .build())
                 .addItem(new MaterialAboutActionItem.Builder()
                         .text(R.string.fork_github)
