@@ -274,4 +274,5 @@
     <string name="account_blocked_error">Account bloccato. Contattare la segreteria studenti</string>
     <string name="invalid_password_error_with_counter_singular">Credenziali errate. %1$s tentativo rimasto</string>
     <string name="invalid_password_error_with_counter_plural">Credenziali errate. %1$s tentativi rimasti</string>
+    <string name="latest_version">Versione più recente</string>
 </resources>

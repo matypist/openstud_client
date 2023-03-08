@@ -289,4 +289,5 @@
     <string name="account_blocked_error">Account is blocked. Please contact the Student Office</string>
     <string name="invalid_password_error_with_counter_singular">Invalid credentials. %1$s attempt left</string>
     <string name="invalid_password_error_with_counter_plural">Invalid credentials. %1$s attempts left</string>
+    <string name="latest_version">Latest version</string>
 </resources>

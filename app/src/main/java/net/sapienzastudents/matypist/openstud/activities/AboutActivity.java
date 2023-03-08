@@ -25,6 +25,11 @@ import com.mikepenz.aboutlibraries.Libs;
 import com.mikepenz.aboutlibraries.LibsBuilder;
 import com.mikepenz.fontawesome_typeface_library.FontAwesome;
 import com.mikepenz.iconics.IconicsDrawable;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.net.URL;
+import java.util.Scanner;
 
 public class AboutActivity extends MaterialAboutActivity {
 
@@ -52,6 +57,23 @@ public class AboutActivity extends MaterialAboutActivity {
         super.onCreate(savedInstanceState);
     }
 
+    private String getLatestGitHubReleaseTag() {
+        String apiUrl = String.format("https://api.github.com/repos/%s/%s/releases", "matypist", "openstud_client");
+
+        try {
+            URL url = new URL(apiUrl);
+            Scanner scanner = new Scanner(url.openStream(), "UTF-8").useDelimiter("\\A");
+            String response = scanner.next();
+
+            JSONArray releases = new JSONArray(response);
+            JSONObject latestRelease = releases.getJSONObject(0);
+
+            return latestRelease.getString("tag_name");
+        } catch(Exception ex) {
+            return null;
+        }
+    }
+
     private void buildApp(Context context, MaterialAboutCard.Builder appCardBuilder) {
         int tintColor = ThemeEngine.getPrimaryTextColor(this);
         Drawable version = ContextCompat.getDrawable(context, R.drawable.ic_update_black);
@@ -60,6 +82,20 @@ public class AboutActivity extends MaterialAboutActivity {
                 .text(getResources().getString(R.string.version))
                 .icon(version).subText(BuildConfig.VERSION_NAME).build());
 
+        String latestGitHubReleaseTag = getLatestGitHubReleaseTag();
+
+        if(latestGitHubReleaseTag != null && !latestGitHubReleaseTag.equals(BuildConfig.VERSION_NAME)) {
+            Drawable latest_version = new IconicsDrawable(this)
+                    .icon(FontAwesome.Icon.faw_arrow_circle_up)
+                    .color(tintColor)
+                    .sizeDp(20);
+
+            appCardBuilder.addItem(new MaterialAboutActionItem.Builder()
+                    .text(getResources().getString(R.string.latest_version))
+                    .icon(latest_version).subText(latestGitHubReleaseTag)
+                    .setOnClickAction(() -> ClientHelper.createCustomTab(this, "https://github.com/matypist/openstud_client/releases/latest"))
+                    .build());
+        }
     }
 
     private void buildMaintainer(Context context, MaterialAboutCard.Builder maintainerCardBuilder) {
