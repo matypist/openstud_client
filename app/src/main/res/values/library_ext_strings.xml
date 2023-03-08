@@ -3,86 +3,86 @@
 <resources>
 
     <!-- Dexter section -->
-    <string name="define_int_dexter" />
-    <string name="library_dexter_author">Karumi</string>
-    <string name="library_dexter_authorWebsite">https://github.com/Karumi</string>
-    <string name="library_dexter_libraryName">Dexter</string>
+    <string name="define_int_dexter" translatable="false"/>
+    <string name="library_dexter_author" translatable="false">Karumi</string>
+    <string name="library_dexter_authorWebsite" translatable="false">https://github.com/Karumi</string>
+    <string name="library_dexter_libraryName" translatable="false">Dexter</string>
     <string name="library_dexter_libraryDescription">An Android library that simplifies the process of requesting permissions at runtime</string>
-    <string name="library_dexter_libraryWebsite">https://github.com/Karumi/Dexter</string>
-    <string name="library_dexter_respositoryLink">https://github.com/Karumi/Dexter</string>
-    <string name="library_dexter_libraryVersion">5.0.0</string>
-    <string name="library_dexter_isOpenSource">true</string>
-    <string name="library_dexter_classPath">com.karumi.dexter.Dexter</string>
+    <string name="library_dexter_libraryWebsite" translatable="false">https://github.com/Karumi/Dexter</string>
+    <string name="library_dexter_respositoryLink" translatable="false">https://github.com/Karumi/Dexter</string>
+    <string name="library_dexter_libraryVersion" translatable="false">5.0.0</string>
+    <string name="library_dexter_isOpenSource" translatable="false">true</string>
+    <string name="library_dexter_classPath" translatable="false">com.karumi.dexter.Dexter</string>
 
 
     <!-- Toasty section -->
-    <string name="define_int_toasty" />
-    <string name="library_toasty_author">GrenderG</string>
-    <string name="library_toasty_authorWebsite">https://github.com/GrenderG/</string>
-    <string name="library_toasty_libraryName">Toasty</string>
+    <string name="define_int_toasty" translatable="false"/>
+    <string name="library_toasty_author" translatable="false">GrenderG</string>
+    <string name="library_toasty_authorWebsite" translatable="false">https://github.com/GrenderG/</string>
+    <string name="library_toasty_libraryName" translatable="false">Toasty</string>
     <string name="library_toasty_libraryDescription">A library to create beautiful and colorful toast notifications</string>
-    <string name="library_toasty_libraryWebsite">https://github.com/GrenderG/Toasty</string>
-    <string name="library_toasty_respositoryLink">https://github.com/GrenderG/Toasty</string>
-    <string name="library_toasty_libraryVersion">1.4.2</string>
-    <string name="library_toasty_isOpenSource">true</string>
-    <string name="library_toasty_classPath">es.dmoral.toasty.Toasty</string>
+    <string name="library_toasty_libraryWebsite" translatable="false">https://github.com/GrenderG/Toasty</string>
+    <string name="library_toasty_respositoryLink" translatable="false">https://github.com/GrenderG/Toasty</string>
+    <string name="library_toasty_libraryVersion" translatable="false">1.4.2</string>
+    <string name="library_toasty_isOpenSource" translatable="false">true</string>
+    <string name="library_toasty_classPath" translatable="false">es.dmoral.toasty.Toasty</string>
 
     <!-- CompactCalendarView section -->
-    <string name="define_int_compactcalendar" />
-    <string name="library_compactcalendar_author">Leonardo Sarra</string>
-    <string name="library_compactcalendar_authorWebsite">https://github.com/lithiumsr</string>
-    <string name="library_compactcalendar_libraryName">CompactCalendarView</string>
+    <string name="define_int_compactcalendar" translatable="false"/>
+    <string name="library_compactcalendar_author" translatable="false">Leonardo Sarra</string>
+    <string name="library_compactcalendar_authorWebsite" translatable="false">https://github.com/lithiumsr</string>
+    <string name="library_compactcalendar_libraryName" translatable="false">CompactCalendarView</string>
     <string name="library_compactcalendar_libraryDescription">An android library which provides a compact calendar view based on SundeepK\'s work</string>
-    <string name="library_compactcalendar_libraryWebsite">https://github.com/lithiumsr/CompactCalendarView</string>
-    <string name="library_compactcalendar_respositoryLink">https://github.com/lithiumsr/CompactCalendarView</string>
-    <string name="library_compactcalendar_libraryVersion">3.1</string>
-    <string name="library_compactcalendar_isOpenSource">true</string>
-    <string name="library_compactcalendar_classPath">devs.mulham.horizontalcalendar.HorizontalCalendar</string>
+    <string name="library_compactcalendar_libraryWebsite" translatable="false">https://github.com/lithiumsr/CompactCalendarView</string>
+    <string name="library_compactcalendar_respositoryLink" translatable="false">https://github.com/lithiumsr/CompactCalendarView</string>
+    <string name="library_compactcalendar_libraryVersion" translatable="false">3.1</string>
+    <string name="library_compactcalendar_isOpenSource" translatable="false">true</string>
+    <string name="library_compactcalendar_classPath" translatable="false">devs.mulham.horizontalcalendar.HorizontalCalendar</string>
     <!-- HorizontalCalendar section -->
-    <string name="define_int_horizontalcalendar" />
-    <string name="library_horizontalcalendar_author">Leonardo Sarra</string>
-    <string name="library_horizontalcalendar_authorWebsite">https://github.com/lithiumsr</string>
-    <string name="library_horizontalcalendar_libraryName">Horizontal-Calendar</string>
+    <string name="define_int_horizontalcalendar" translatable="false"/>
+    <string name="library_horizontalcalendar_author" translatable="false">Leonardo Sarra</string>
+    <string name="library_horizontalcalendar_authorWebsite" translatable="false">https://github.com/lithiumsr</string>
+    <string name="library_horizontalcalendar_libraryName" translatable="false">Horizontal-Calendar</string>
     <string name="library_horizontalcalendar_libraryDescription">A material horizontal calendar view for Android based on Mulham-Raee\'s work</string>
-    <string name="library_horizontalcalendar_libraryWebsite">https://github.com/lithiumsr/Horizontal-Calendar</string>
-    <string name="library_horizontalcalendar_respositoryLink">https://github.com/lithiumsr/Horizontal-Calendar</string>
-    <string name="library_horizontalcalendar_libraryVersion">1.3.7</string>
-    <string name="library_horizontalcalendar_isOpenSource">true</string>
-    <string name="library_horizontalcalendar_classPath">devs.mulham.horizontalcalendar.HorizontalCalendar</string>
+    <string name="library_horizontalcalendar_libraryWebsite" translatable="false">https://github.com/lithiumsr/Horizontal-Calendar</string>
+    <string name="library_horizontalcalendar_respositoryLink" translatable="false">https://github.com/lithiumsr/Horizontal-Calendar</string>
+    <string name="library_horizontalcalendar_libraryVersion" translatable="false">1.3.7</string>
+    <string name="library_horizontalcalendar_isOpenSource" translatable="false">true</string>
+    <string name="library_horizontalcalendar_classPath" translatable="false">devs.mulham.horizontalcalendar.HorizontalCalendar</string>
 
     <!-- Kapitalize section -->
-    <string name="define_int_kapitalize" />
-    <string name="library_kapitalize_author">Leonardo Sarra</string>
-    <string name="library_kapitalize_authorWebsite">https://github.com/lithiumsr</string>
-    <string name="library_kapitalize_libraryName">Kapitalize</string>
+    <string name="define_int_kapitalize" translatable="false"/>
+    <string name="library_kapitalize_author" translatable="false">Leonardo Sarra</string>
+    <string name="library_kapitalize_authorWebsite" translatable="false">https://github.com/lithiumsr</string>
+    <string name="library_kapitalize_libraryName" translatable="false">Kapitalize</string>
     <string name="library_kapitalize_libraryDescription">A Kotlin library to automatically capitalize people\'s names </string>
-    <string name="library_kapitalize_libraryWebsite">https://github.com/lithiumsr/kapitalize</string>
-    <string name="library_kapitalize_respositoryLink">https://github.com/lithiumsr/kapitalize</string>
-    <string name="library_kapitalize_libraryVersion">1.5.3</string>
-    <string name="library_kapitalize_isOpenSource">true</string>
-    <string name="library_kapitalize_classPath">com.lithium.kapitalize.Kapitalize</string>
+    <string name="library_kapitalize_libraryWebsite" translatable="false">https://github.com/lithiumsr/kapitalize</string>
+    <string name="library_kapitalize_respositoryLink" translatable="false">https://github.com/lithiumsr/kapitalize</string>
+    <string name="library_kapitalize_libraryVersion" translatable="false">1.5.3</string>
+    <string name="library_kapitalize_isOpenSource" translatable="false">true</string>
+    <string name="library_kapitalize_classPath" translatable="false">com.lithium.kapitalize.Kapitalize</string>
 
     <!-- OpenStud Driver section -->
-    <string name="define_int_openstud_driver" />
-    <string name="library_openstud_driver_author">Leonardo Sarra</string>
-    <string name="library_openstud_driver_authorWebsite">https://github.com/matypist</string>
-    <string name="library_openstud_driver_libraryName">OpenStud Driver</string>
+    <string name="define_int_openstud_driver" translatable="false"/>
+    <string name="library_openstud_driver_author" translatable="false">Leonardo Sarra</string>
+    <string name="library_openstud_driver_authorWebsite" translatable="false">https://github.com/matypist</string>
+    <string name="library_openstud_driver_libraryName" translatable="false">OpenStud Driver</string>
     <string name="library_openstud_driver_libraryDescription">A Java library that provides an easy way to obtain infos from Sapienza University\'s Infostud</string>
-    <string name="library_openstud_driver_libraryWebsite">https://github.com/matypist/openstud_driver</string>
-    <string name="library_openstud_driver_respositoryLink">https://github.com/matypist/openstud_driver</string>
-    <string name="library_openstud_driver_libraryVersion">0.60.2</string>
-    <string name="library_openstud_driver_isOpenSource">true</string>
-    <string name="library_openstud_driver_classPath">matypist.openstud.driver.core.Openstud</string>
+    <string name="library_openstud_driver_libraryWebsite" translatable="false">https://github.com/matypist/openstud_driver</string>
+    <string name="library_openstud_driver_respositoryLink" translatable="false">https://github.com/matypist/openstud_driver</string>
+    <string name="library_openstud_driver_libraryVersion" translatable="false">0.60.2</string>
+    <string name="library_openstud_driver_isOpenSource" translatable="false">true</string>
+    <string name="library_openstud_driver_classPath" translatable="false">matypist.openstud.driver.core.Openstud</string>
 
     <!-- MaterialSearchBar section -->
-    <string name="define_int_searchbar" />
-    <string name="library_searchbar_author">Leonardo Sarra</string>
-    <string name="library_searchbar_authorWebsite">https://github.com/lithiumsr</string>
-    <string name="library_searchbar_libraryName">MaterialSearchBar</string>
+    <string name="define_int_searchbar" translatable="false"/>
+    <string name="library_searchbar_author" translatable="false">Leonardo Sarra</string>
+    <string name="library_searchbar_authorWebsite" translatable="false">https://github.com/lithiumsr</string>
+    <string name="library_searchbar_libraryName" translatable="false">MaterialSearchBar</string>
     <string name="library_searchbar_libraryDescription">An improved implementation of mancj\'s Material Design Search Bar for Android</string>
-    <string name="library_searchbar_libraryWebsite">https://github.com/lithiumsr/materialsearchbar</string>
-    <string name="library_searchbar_respositoryLink">https://github.com/lithiumsr/materialsearchbar</string>
-    <string name="library_searchbar_libraryVersion">0.8.2</string>
-    <string name="library_searchbar_isOpenSource">true</string>
-    <string name="library_searchbar_classPath">com.mancj.materialsearchbar.MaterialSearchBar</string>
+    <string name="library_searchbar_libraryWebsite" translatable="false">https://github.com/lithiumsr/materialsearchbar</string>
+    <string name="library_searchbar_respositoryLink" translatable="false">https://github.com/lithiumsr/materialsearchbar</string>
+    <string name="library_searchbar_libraryVersion" translatable="false">0.8.2</string>
+    <string name="library_searchbar_isOpenSource" translatable="false">true</string>
+    <string name="library_searchbar_classPath" translatable="false">com.mancj.materialsearchbar.MaterialSearchBar</string>
 </resources>

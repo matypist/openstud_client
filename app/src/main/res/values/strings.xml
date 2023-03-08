@@ -7,11 +7,11 @@
     <string name="saveLogin">Remember me</string>
     <string name="title_activity_profile" translatable="false">ProfileActivity</string>
     <string name="course">Course</string>
-    <string name="department">Department</string>
-    <string name="status">Student status</string>
-    <string name="year_course">Course year</string>
-    <string name="birthDate">Birth date</string>
-    <string name="birthPlace">Birth place</string>
+    <string name="department">Faculty</string>
+    <string name="status">Type of registration</string>
+    <string name="year_course">Academic year</string>
+    <string name="birthDate">Date of birth</string>
+    <string name="birthPlace">Place of birth</string>
     <string name="year_corse_profile">%1$s year</string>
     <string name="ects">ECTS</string>
     <string name="isee" translatable="false">ISEE</string>
@@ -24,14 +24,14 @@
     <string name="exit">Logout</string>
     <string name="paid">Paid</string>
     <string name="unpaid">Unpaid</string>
-    <string name="blank_username_error">"You can't leave the username field blank!</string>
-    <string name="blank_password_error">"You can't leave the password field blank!</string>
-    <string name="blank_username_password_error">"You can't leave the username and password fields blank!</string>
+    <string name="blank_username_error">You can\'t leave the username field blank!</string>
+    <string name="blank_password_error">You can\'t leave the password field blank!</string>
+    <string name="blank_username_password_error">You can\'t leave the username and password fields blank!</string>
     <string name="expired_password_error">The password is expired and needs to be changed!</string>
     <string name="connection_error">Connection error!</string>
     <string name="retry">Retry</string>
     <string name="invalid_response_error">InfoStud doesn\'t seems to work properly</string>
-    <string name="user_not_enabled_error">User not enabled to manage InfoStud!</string>
+    <string name="user_not_enabled_error">User not allowed to manage InfoStud</string>
     <string name="invalid_password_error">Invalid credentials!</string>
     <string name="device_no_internet">Your device is not connected to internet</string>
     <string name="isee_not_available">Not available</string>
@@ -60,8 +60,8 @@
     <string name="no_unpaid_tax_found">No unpaid tax was found</string>
     <string name="ok_delete">Reservation successfully deleted</string>
     <string name="failed_delete">Can\'t delete reservation! Try again later.</string>
-    <string name="failed_get_io">PDF file can\'t be saved.</string>
-    <string name="failed_get_network">Connection error. File cannot be downloaded!</string>
+    <string name="failed_get_io">The PDF of the receipt cannot be saved on the device.</string>
+    <string name="failed_get_network">Connection error. Unable to download the receipt!</string>
     <string name="delete_res_dialog_title">Delete reservation?</string>
     <string name="delete_res_dialog_description">Reservation for %1$s will be deleted. Are you sure?</string>
     <string name="show_exam_sessions">Show exam sessions</string>
@@ -121,7 +121,7 @@
     <string name="weighted_average">Weighted average</string>
     <string name="description_reservation_options">Reservation options</string>
     <string name="add_calendar">Add to calendar</string>
-    <string name="closed_reservation">You can\'t delete the reservation after the deadline!</string>
+    <string name="closed_reservation">You can\'t cancel a reservation after the deadline</string>
     <string name="info_extra_reservation">Info</string>
     <string name="logo_designer">Logo and icon</string>
     <string name="github_profile" translatable="false">GitHub profile</string>
@@ -142,15 +142,15 @@
     <string name="secret_question">Secret question</string>
     <string name="answer">Answer</string>
     <string name="confirm">Confirm</string>
-    <string name="recovery_password">Recovery password</string>
+    <string name="recovery_password">Password recovery</string>
     <string name="email" translatable="false">Email</string>
     <string name="recovery_email">Recovery email</string>
     <string name="invalid_answer">The answer is not correct!</string>
-    <string name="invalid_student_id">Student ID does not exist</string>
-    <string name="recovery_ok">Password has been sent to your email</string>
+    <string name="invalid_student_id">Student ID does not exist!</string>
+    <string name="recovery_ok">The password was sent to your recovery email</string>
     <string name="recover_password_details">Answer the security question to receive a new password on your recovery email address</string>
     <string name="forgot_password">Forgot password?</string>
-    <string name="no_recovery">Unable to recover your password. Contact the Student Office</string>
+    <string name="no_recovery">Unable to recover your password. Contact the Student Office.</string>
     <string name="calendar">Calendar</string>
     <string name="no_events">No events found</string>
     <string name="where_event">Place: %1$s</string>
@@ -183,19 +183,19 @@
     <string name="classroom_timetable">Classroom timetable</string>
     <string name="no_lesson_found">No lessons found</string>
     <string name="classrooms">Classrooms</string>
-    <string name="exam_done_date">Date exam: %1$s</string>
+    <string name="exam_done_date">Date: %1$s</string>
     <string name="key_exam_date" translatable="false">key_exam_date</string>
     <string name="show_exam_date">Show passed exam date</string>
-    <string name="show_exam_date_description">Show the day an exam was passed by the student</string>
+    <string name="show_exam_date_description">Show passing date for examinations</string>
     <string name="show_options_lesson">Enable export of lessons to the calendar</string>
-    <string name="show_options_lesson_description">Show an icon to let you add a lesson to your system calendar from the \'\'Classroom timetable\'\' and \'\'Calendar\'\' screens</string>
+    <string name="show_options_lesson_description">Show an icon to let you add a lesson to your system calendar from the \'\'Calendar\'\' screen</string>
     <string name="key_options_lesson" translatable="false">key_options_lesson</string>
     <string name="pref_title_lessons">Lessons</string>
-    <string name="add_calendar_event">Add to system calendar</string>
+    <string name="add_calendar_event">Export to system calendar</string>
     <string name="place_reservation_event">Place reservation</string>
     <string name="baseFinalGrade">Base</string>
     <string name="average">Average</string>
-    <string name="widget_login_error">You have to save the credentials in order to enable the widget!</string>
+    <string name="widget_login_error">You must have saved your credentials to use the widget!</string>
     <string name="appwidget_text" translatable="false">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
     <string name="rate_limit">Reached rate limit on SapienzaApps\' API</string>
@@ -205,27 +205,27 @@
     <string name="no_news_found">No news was found</string>
     <string name="sapienzaapps">GOMP API</string>
     <string name="infostud_maintenance">InfoStud is in maintenance</string>
-    <string name="personal_identifier">Social security number</string>
+    <string name="personal_identifier">Italian Tax Code (Codice Fiscale)</string>
     <string name="events">Events</string>
     <string name="event_theatre_when">Starts at %1$s</string>
     <string name="event_theatre_where">Location: %1$s</string>
     <string name="key_biometrics" translatable="false">key_biometrics</string>
     <string name="login_no_biometrics_found">Biometric login disabled because no available biometric inputs were found</string>
-    <string name="login_no_biometric_hw_found">The device doesn\'t have a compatible biometric sensor</string>
+    <string name="login_no_biometric_hw_found">Biometric login deactivated due to lack of a biometric sensor</string>
     <string name="no_biometrics_found">Can\'t enable the feature because the device doesn\'t have any biometric input configured</string>
-    <string name="no_biometric_hw_found">The device doesn\'t have a compatible biometric sensor</string>
+    <string name="no_biometric_hw_found">The device doesn\'t have any compatible biometric sensor</string>
     <string name="biometric_unavailable">Biometric hardware is unavailable. Try again later</string>
     <string name="pref_title_security">Security</string>
-    <string name="enable_biometric_login">Enable biometric login</string>
+    <string name="enable_biometric_login">Force biometric login</string>
     <string name="enable_biometric_login_description">Force the user to login using a biometric input (e.g: fingerprint, iris).</string>
     <string name="warning">Warning</string>
     <string name="biometric_warning">From the next start the app will request a biometric input already configured in the phone settings .\n\nIf no method of input is available this feature will be automatically disabled.</string>
     <string name="biometric_login">Biometric login</string>
-    <string name="biometric_login_enable">Enable biometric login</string>
+    <string name="biometric_login_enable">Force biometric login</string>
     <string name="biometric_lockout">Biometric login is disabled because of too many consecutives fails. Try again later.</string>
     <string name="key_security_category" translatable="false">key_security_category</string>
     <string name="send_message">Send a message</string>
-    <string name="no_write_permission_pdf">Can\'t show the PDF without write permission</string>
+    <string name="no_write_permission_pdf">Can\'t download the PDF without write permission</string>
     <string name="no_write_permission_pdf_delete">Can\'t delete PDF files without write permission</string>
     <string name="add_custom_lesson">Add custom lessons</string>
     <string name="key_add_custom_lesson" translatable="false">key_add_custom_lesson</string>
@@ -233,13 +233,13 @@
     <string name="lesson_name">Course name</string>
     <string name="classroom">Classroom</string>
     <string name="add_one_lesson_day">Add at least one lesson!</string>
-    <string name="missing_parameters">You have to fill all the fields!</string>
+    <string name="missing_parameters">You must fill in all fields</string>
     <string name="end_course">End course</string>
     <string name="start_course">Start course</string>
     <string name="add_lesson_day">Add lesson</string>
     <string name="add_course">Add course</string>
     <string name="courses_added">Added courses</string>
-    <string name="no_course_added">No custom course was added</string>
+    <string name="no_course_added">No courses added</string>
     <string name="end_lesson_label">End lesson</string>
     <string name="start_lesson_label">Start lesson</string>
     <string name="add_custom_lesson_summary">Setup custom lessons and show them in the calendar</string>
@@ -253,7 +253,7 @@
     <string name="upcoming_exams_widget">Upcoming exams</string>
     <string name="cfu_date_widget">%1$s ECTS • %2$s</string>
     <string name="show_countdown">Show remaining days to the exam</string>
-    <string name="widget_no_exams">There are no exams in the near future.\nHave fun!</string>
+    <string name="widget_no_exams">No exams in sight!</string>
     <string name="exam_widget">Upcoming exams</string>
     <string name="stats_widget">Stats</string>
     <string name="certificates">Certificates</string>
@@ -268,24 +268,24 @@
     <string name="degree_with_exams_eng">Degree with exams (English)</string>
     <string name="no_certificate">No certificate of this type was found</string>
     <string name="select_careers">Select career</string>
-    <string name="storage_error">Storage error</string>
+    <string name="storage_error">Unable to save the certificate</string>
     <string name="downloading_certificate">Obtaining certificate…</string>
-    <string name="failed_get_network_certificate">Connection error. File cannot be downloaded!</string>
+    <string name="failed_get_network_certificate">Connection error. Unable to download the certificate!</string>
     <string name="email_university">University email</string>
     <string name="student_card">Student card</string>
     <string name="studentId_combo">Student ID: %1$s</string>
     <string name="birthDate_combo">Birth date: %1$s</string>
-    <string name="no_student_card_found">No student card was found!\nIn order to request it, so that you can take advantage of the benefits that it provides, you have to check InfoStud using your web browser.</string>
+    <string name="no_student_card_found">No student card was found!\nTo apply for it, to take advantage of the benefits offered, you need to log on to the InfoStud website.</string>
     <string name="update_card_error">Can\'t update student card details</string>
     <string name="reservation_period">Reservation period:  %1$s -  %2$s</string>
     <string name="title_activity_web_view" translatable="false">WebView</string>
     <string name="presentation">Base grade</string>
     <string name="key_minmax_remove" translatable="false">key_minmax_remove</string>
-    <string name="ignore_minmax_exam">Ignore best/worse exam in base grade</string>
-    <string name="ignore_minmax_exam_description">Don\'t consider your best/worse exam when computing the base graduation mark</string>
-    <string name="change_value_30l">Change the value of the \"30L\" mark used when computing the GPA</string>
+    <string name="ignore_minmax_exam">Ignore best/worse exam for base grade</string>
+    <string name="ignore_minmax_exam_description">Don\'t consider your best/worse exam when computing the degree presentation grade</string>
+    <string name="change_value_30l">Change the value of the grade \'30L\' when used in the calculation of the average</string>
     <string name="laude_value_set_error">I wish it was that simple…</string>
-    <string name="account_blocked_error">Account is blocked. Please contact the student office</string>
+    <string name="account_blocked_error">Account is blocked. Please contact the Student Office</string>
     <string name="invalid_password_error_with_counter_singular">Invalid credentials. %1$s attempt left</string>
     <string name="invalid_password_error_with_counter_plural">Invalid credentials. %1$s attempts left</string>
 </resources>
