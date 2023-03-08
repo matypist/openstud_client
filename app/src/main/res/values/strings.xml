@@ -216,12 +216,12 @@
     <string name="no_biometric_hw_found">The device doesn\'t have any compatible biometric sensor</string>
     <string name="biometric_unavailable">Biometric hardware is unavailable. Try again later</string>
     <string name="pref_title_security">Security</string>
-    <string name="enable_biometric_login">Force biometric login</string>
+    <string name="enable_biometric_login">Enable biometric login</string>
     <string name="enable_biometric_login_description">Force the user to login using a biometric input (e.g: fingerprint, iris).</string>
     <string name="warning">Warning</string>
     <string name="biometric_warning">From the next start the app will request a biometric input already configured in the phone settings .\n\nIf no method of input is available this feature will be automatically disabled.</string>
     <string name="biometric_login">Biometric login</string>
-    <string name="biometric_login_enable">Force biometric login</string>
+    <string name="biometric_login_enable">Enable biometric login</string>
     <string name="biometric_lockout">Biometric login is disabled because of too many consecutives fails. Try again later.</string>
     <string name="key_security_category" translatable="false">key_security_category</string>
     <string name="send_message">Send a message</string>
