@@ -40,7 +40,7 @@
     <string name="teacher_reservation">Docente: %1$s</string>
     <string name="teacher_event">Docente: %1$s</string>
     <string name="date_exam">Data esame: %1$s</string>
-    <string name="description_reservation">Informazioni aggiuntive: %1$s</string>
+    <string name="description_reservation">Note: %1$s</string>
     <string name="reload">Ricarica</string>
     <string name="no_reservations_found">Nessuna prenotazione trovata</string>
     <string name="no_exams_done_found">Nessun esame trovato</string>
@@ -75,10 +75,10 @@
     <string name="start_date_reservation">Inizio prenotazioni: %1$s</string>
     <string name="end_date_reservation">Fine prenotazioni: %1$s</string>
     <string name="channel_reservation">Canale: %1$s</string>
-    <string name="place_reservation">Aggiungi prenotazione</string>
-    <string name="reservation_error">Impossibile effettuare la prenotazione. Riprova più tardi</string>
-    <string name="reservation_ok">Prenotazione effettuata con successo</string>
-    <string name="already_placed_reservation">Hai già effettuato una prenotazione per questa sessione!</string>
+    <string name="place_reservation">Prenota</string>
+    <string name="reservation_error">Impossibile prenotare l\'appello. Riprova più tardi</string>
+    <string name="reservation_ok">Appello prenotato con successo</string>
+    <string name="already_placed_reservation">Hai già prenotato questo appello!</string>
     <string name="fork_telegram">Canale telegram</string>
     <string name="fork_github">Codice sorgente</string>
     <string name="fork_maintainer">Maintainer</string>
@@ -182,7 +182,7 @@
     <string name="show_options_lesson_description">Mostra un\'icona che consente di aggiungere una lezione al calendario di sistema nella schermata \'\'Calendario\'\'</string>
     <string name="pref_title_lessons">Lezioni</string>
     <string name="add_calendar_event">Esporta sul calendario di sistema</string>
-    <string name="place_reservation_event">Prenota esame</string>
+    <string name="place_reservation_event">Prenota appello</string>
     <string name="baseFinalGrade">Base</string>
     <string name="average">Media</string>
     <string name="widget_login_error">Devi aver salvato le credenziali per utilizzare il widget!</string>

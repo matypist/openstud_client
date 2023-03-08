@@ -47,7 +47,7 @@
     <string name="number_reservation">Reservation number: %1$s</string>
     <string name="teacher_reservation">Teacher: %1$s</string>
     <string name="teacher_event">Teacher: %1$s</string>
-    <string name="description_reservation">Additional infos: %1$s</string>
+    <string name="description_reservation">Notes: %1$s</string>
     <string name="date_exam">Date exam: %1$s</string>
     <string name="exams_completed">Completed</string>
     <string name="reservations">Reservations</string>
@@ -74,10 +74,10 @@
     <string name="end_date_reservation">End reservations: %1$s</string>
     <string name="channel_reservation">Channel: %1$s</string>
     <string name="info_extra_reservation_format">Infos: %1$s</string>
-    <string name="place_reservation">Place reservation</string>
-    <string name="reservation_error">Can\'t place the reservation. Try again later</string>
-    <string name="reservation_ok">Reservation placed successfully</string>
-    <string name="already_placed_reservation">You already placed a reservation for this session!</string>
+    <string name="place_reservation">Book</string>
+    <string name="reservation_error">Can\'t book the exam call. Try again later</string>
+    <string name="reservation_ok">Exam call booked successfully</string>
+    <string name="already_placed_reservation">You already booked this exam call!</string>
     <string name="fork_telegram">Telegram channel</string>
     <string name="fork_github">Source code</string>
     <string name="fork_maintainer">Maintainer</string>
@@ -192,14 +192,14 @@
     <string name="key_options_lesson" translatable="false">key_options_lesson</string>
     <string name="pref_title_lessons">Lessons</string>
     <string name="add_calendar_event">Export to system calendar</string>
-    <string name="place_reservation_event">Place reservation</string>
+    <string name="place_reservation_event">Book exam call</string>
     <string name="baseFinalGrade">Base</string>
     <string name="average">Average</string>
     <string name="widget_login_error">You must have saved your credentials to use the widget!</string>
     <string name="appwidget_text" translatable="false">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
     <string name="rate_limit">Reached rate limit on SapienzaApps\' API</string>
-    <string name="already_placed_button">Reservation placed</string>
+    <string name="already_placed_button">Booked</string>
     <string name="no_pdf_app">No application found that can handle PDF files!</string>
     <string name="news">News</string>
     <string name="no_news_found">No news was found</string>
