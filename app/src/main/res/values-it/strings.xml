@@ -39,7 +39,7 @@
     <string name="number_reservation">Numero prenotazione: %1$s</string>
     <string name="teacher_reservation">Docente: %1$s</string>
     <string name="teacher_event">Docente: %1$s</string>
-    <string name="date_exam">Data esame: %1$s</string>
+    <string name="date_exam">Data appello: %1$s</string>
     <string name="description_reservation">Note: %1$s</string>
     <string name="reload">Ricarica</string>
     <string name="no_reservations_found">Nessuna prenotazione trovata</string>
@@ -53,8 +53,8 @@
     <string name="failed_get_io">Il PDF della ricevuta non può essere salvato sul dispositivo.</string>
     <string name="failed_get_network">Errore di rete. Impossibile scaricare la ricevuta!</string>
     <string name="delete_res_dialog_title">Cancellare la prenotazione?</string>
-    <string name="delete_res_dialog_description">La prenotazione di %1$s sarà cancellata. Sei sicuro?</string>
-    <string name="delete_ok">Cancella</string>
+    <string name="delete_res_dialog_description">Sei sicuro di voler cancellare la prenotazione per %1$s?</string>
+    <string name="delete_ok">Procedi</string>
     <string name="delete_abort">Annulla</string>
     <string name="receipt">Ricevuta</string>
     <string name="delete_reservation">Cancella prenotazione</string>
@@ -106,8 +106,8 @@
     <string name="default_laude">Valore \"30L\"</string>
     <string name="default_laude_ext">Scegli un valore per la lode da usare per generare le statistiche</string>
     <string name="sort_by">Ordina per</string>
-    <string name="success_delete_pdf">File cancellati con successo!</string>
-    <string name="failed_delete_pdf">Impossibile cancellare i file dalla cache. Riprova più tardi</string>
+    <string name="success_delete_pdf">File eliminati con successo!</string>
+    <string name="failed_delete_pdf">Impossibile eliminare i file dalla cache. Riprova più tardi</string>
     <string name="restart_required">Riavvio necessario</string>
     <string name="restart_required_description">Per applicare le ultime modifiche è necessario riavviare OpenStud. Riavviare ora?</string>
     <string name="restart_ok">Riavvia</string>
