@@ -8,6 +8,12 @@ OpenStud is an unofficial client for Sapienza's Infostud.
 
 It was written with Java 8 in mind and it supports Android 6.0+ (API Level 23+), at the time of writing it targets Android 11 (API Level 30).
 
+## Install
+
+$\to$ <a href="https://github.com/matypist/openstud_client/releases/latest/download/openstud.apk">**Click here to download the latest version's APK file**</a> $\gets$
+
+$\to$ <a href="https://github.com/matypist/openstud_client/releases/latest/download/openstud.apk">**Clicca qui per scaricare l'APK dell'ultima versione**</a> $\gets$
+
 ## Features
 
 OpenStud out of the box supports every feature which was present in the old Infostud Mobile app but it comes with a new look and modern code.
