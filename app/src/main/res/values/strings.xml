@@ -16,7 +16,7 @@
     <string name="ects">ECTS</string>
     <string name="isee" translatable="false">ISEE</string>
     <string name="profile">Profile</string>
-    <string name="about">About</string>
+    <string name="about">About the app</string>
     <string name="settings">Settings</string>
     <string name="stats">Stats</string>
     <string name="exams">Exams</string>
@@ -84,7 +84,7 @@
     <string name="fork_maintainer_email_address">matypist@sapienzastudents.net</string>
     <string name="version">Version</string>
     <string name="author">Author</string>
-    <string name="send_email">Send an email</string>
+    <string name="send_email">Send an e-mail</string>
     <string name="question_concerning_openstud">Any question?</string>
     <string name="open_source_libs">Open source libraries</string>
     <string name="no_sessions_found">No sessions found</string>
@@ -143,12 +143,12 @@
     <string name="answer">Answer</string>
     <string name="confirm">Confirm</string>
     <string name="recovery_password">Password recovery</string>
-    <string name="email" translatable="false">Email</string>
-    <string name="recovery_email">Recovery email</string>
+    <string name="email">Institutional mailbox</string>
+    <string name="recovery_email">Recovery e-mail</string>
     <string name="invalid_answer">The answer is not correct!</string>
     <string name="invalid_student_id">Student ID does not exist!</string>
-    <string name="recovery_ok">The password was sent to your recovery email</string>
-    <string name="recover_password_details">Answer the security question to receive a new password on your recovery email address</string>
+    <string name="recovery_ok">The password was sent to your recovery e-mail address</string>
+    <string name="recover_password_details">Answer the security question to receive a new password on your recovery e-mail address</string>
     <string name="forgot_password">Forgot password?</string>
     <string name="no_recovery">Unable to recover your password. Contact the Student Office.</string>
     <string name="calendar">Calendar</string>
@@ -271,11 +271,11 @@
     <string name="storage_error">Unable to save the certificate</string>
     <string name="downloading_certificate">Obtaining certificate…</string>
     <string name="failed_get_network_certificate">Connection error. Unable to download the certificate!</string>
-    <string name="email_university">University email</string>
+    <string name="email_university">University e-mail</string>
     <string name="student_card">Student card</string>
     <string name="studentId_combo">Student ID: %1$s</string>
     <string name="birthDate_combo">Birth date: %1$s</string>
-    <string name="no_student_card_found">No student card was found!\nTo apply for it, to take advantage of the benefits offered, you need to log on to the InfoStud website.</string>
+    <string name="no_student_card_found">No student card was found!\n\nTo apply for it, to take advantage of the benefits offered, you need to log on to the InfoStud website.</string>
     <string name="update_card_error">Can\'t update student card details</string>
     <string name="reservation_period">Reservation period:  %1$s -  %2$s</string>
     <string name="title_activity_web_view" translatable="false">WebView</string>

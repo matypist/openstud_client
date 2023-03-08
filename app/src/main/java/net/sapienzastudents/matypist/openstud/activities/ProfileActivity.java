@@ -85,7 +85,7 @@ public class ProfileActivity extends BaseDataActivity {
 
     @OnClick(R.id.emailLayout)
     void onEmailClick() {
-        ClientHelper.createWebViewActivity(this, "Email", student.getEmail(), os.getConfig().getEmailURL(), ClientHelper.WebViewType.EMAIL);
+        ClientHelper.createWebViewActivity(this, "E-mail", student.getEmail(), os.getConfig().getEmailURL(), ClientHelper.WebViewType.EMAIL);
     }
 
     private Drawer drawer;
