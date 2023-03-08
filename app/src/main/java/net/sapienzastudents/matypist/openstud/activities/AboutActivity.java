@@ -75,7 +75,7 @@ public class AboutActivity extends MaterialAboutActivity {
 
         maintainerCardBuilder.title(R.string.fork_maintainer);
         maintainerCardBuilder.addItem(new MaterialAboutActionItem.Builder()
-                        .text("Matteo Collica")
+                        .text("Matteo Collica (Matypist)")
                         .icon(person)
                         .build())
                 .addItem(ConvenienceBuilder.createEmailItem(context, email,
@@ -97,8 +97,12 @@ public class AboutActivity extends MaterialAboutActivity {
     private void buildMisc(Context context, MaterialAboutCard.Builder miscCardBuilder) {
         int tintColor = ThemeEngine.getPrimaryTextColor(this);
         Drawable libraries = ContextCompat.getDrawable(context, R.drawable.ic_extension_black_24dp);
-        Drawable telegram = new IconicsDrawable(this)
-                .icon(FontAwesome.Icon.faw_telegram)
+        Drawable telegram_channel = new IconicsDrawable(this)
+                .icon(FontAwesome.Icon.faw_bullhorn)
+                .color(tintColor)
+                .sizeDp(20);
+        Drawable telegram_group = new IconicsDrawable(this)
+                .icon(FontAwesome.Icon.faw_users)
                 .color(tintColor)
                 .sizeDp(20);
         Drawable github = new IconicsDrawable(this)
@@ -115,8 +119,13 @@ public class AboutActivity extends MaterialAboutActivity {
         int id_theme = ThemeEngine.getAboutTheme(this);
         miscCardBuilder.title(R.string.about)
                 .addItem(new MaterialAboutActionItem.Builder()
-                        .text(R.string.fork_telegram)
-                        .icon(telegram)
+                        .text(R.string.fork_telegram_channel)
+                        .icon(telegram_channel)
+                        .setOnClickAction(() -> ClientHelper.createCustomTab(this, "https://telegram.me/OpenStud"))
+                        .build())
+                .addItem(new MaterialAboutActionItem.Builder()
+                        .text(R.string.fork_telegram_group)
+                        .icon(telegram_group)
                         .setOnClickAction(() -> ClientHelper.createCustomTab(this, "https://telegram.me/OpenStud"))
                         .build())
                 .addItem(new MaterialAboutActionItem.Builder()

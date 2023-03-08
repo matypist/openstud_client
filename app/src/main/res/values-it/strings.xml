@@ -79,7 +79,8 @@
     <string name="reservation_error">Impossibile prenotare l\'appello. Riprova più tardi</string>
     <string name="reservation_ok">Appello prenotato con successo</string>
     <string name="already_placed_reservation">Hai già prenotato questo appello!</string>
-    <string name="fork_telegram">Canale telegram</string>
+    <string name="fork_telegram_channel">Canale aggiornamenti</string>
+    <string name="fork_telegram_group">Gruppo telegram</string>
     <string name="fork_github">Codice sorgente</string>
     <string name="fork_maintainer">Maintainer</string>
     <string name="fork_maintainer_email_address">matypist@sapienzastudents.net</string>

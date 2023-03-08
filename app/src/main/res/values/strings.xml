@@ -78,7 +78,8 @@
     <string name="reservation_error">Can\'t book the exam call. Try again later</string>
     <string name="reservation_ok">Exam call booked successfully</string>
     <string name="already_placed_reservation">You already booked this exam call!</string>
-    <string name="fork_telegram">Telegram channel</string>
+    <string name="fork_telegram_channel">Updates channel</string>
+    <string name="fork_telegram_group">Telegram group</string>
     <string name="fork_github">Source code</string>
     <string name="fork_maintainer">Maintainer</string>
     <string name="fork_maintainer_email_address">matypist@sapienzastudents.net</string>
