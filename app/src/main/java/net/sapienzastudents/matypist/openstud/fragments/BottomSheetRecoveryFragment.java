@@ -11,11 +11,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatEditText;
 import androidx.core.content.ContextCompat;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.google.android.material.textfield.TextInputEditText;
 import net.sapienzastudents.matypist.openstud.R;
 import net.sapienzastudents.matypist.openstud.activities.LoginActivity;
 import net.sapienzastudents.matypist.openstud.helpers.ClientHelper;
@@ -29,7 +29,7 @@ public class BottomSheetRecoveryFragment extends BottomSheetDialogFragment {
     String questionText;
     String studentID;
     @BindView(R.id.questionInput)
-    TextInputEditText questionInput;
+    AppCompatEditText questionInput;
     @BindView(R.id.question)
     TextView question;
     @BindView(R.id.confirm)

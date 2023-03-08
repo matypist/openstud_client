@@ -59,7 +59,7 @@
         app:hintAnimationEnabled="false"
         app:hintEnabled="false">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/questionInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
