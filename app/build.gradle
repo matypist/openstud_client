@@ -13,8 +13,8 @@ android {
         applicationId "net.sapienzastudents.matypist.openstud"
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 192
-        versionName "1.31_" + getDate()
+        versionCode 193
+        versionName "1.32_" + getDate()
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
