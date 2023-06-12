@@ -10,17 +10,17 @@ It was developed with Java 8 and is compatible with Android 6.0+ (API Level 23+)
 
 ## Useful links
 
-- <a href="https://github.com/matypist/openstud_client/releases/latest/download/openstud.apk">**🇬🇧 Download latest version's APK file**</a>
+- **🇬🇧 [Download latest version's APK file](https://github.com/matypist/openstud_client/releases/latest/download/OpenStud.apk)**
 
-  <a href="https://github.com/matypist/openstud_client/releases/latest/download/openstud.apk">**🇮🇹 Scarica l'APK della versione più recente**</a>
+  **🇮🇹 [Scarica l'APK della versione più recente](https://github.com/matypist/openstud_client/releases/latest/download/OpenStud.apk)**
 
-- <a href="https://t.me/OpenStud">**🇬🇧 Join the Telegram channel to not miss any app updates**</a>
+- **🇬🇧 [Join](https://t.me/OpenStud) the Telegram channel to not miss any app updates**
 
-  <a href="https://t.me/OpenStud">**🇮🇹 Entra nel canale Telegram per non perderti eventuali aggiornamenti**</a>
+  **🇮🇹 [Entra](https://t.me/OpenStud) nel canale Telegram per non perderti eventuali aggiornamenti**
 
-- <a href="https://t.me/OpenStud">**🇬🇧 Join the Telegram Group to chat about it**</a>
+- **🇬🇧 [Join](https://osgroup.sapienzastudents.net) the Telegram Group to chat about it**
 
-  <a href="https://t.me/OpenStud">**🇮🇹 Entra nel gruppo Telegram per parlarne insieme a noi**</a>
+  **🇮🇹 [Entra](https://osgroup.sapienzastudents.net) nel gruppo Telegram per parlarne insieme a noi**
 
 ## Features
 
