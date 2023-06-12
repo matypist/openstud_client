@@ -4,40 +4,40 @@
 [![API](https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=23)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-OpenStud is an unofficial client for Sapienza's Infostud.
+OpenStud is an unofficial Open Source client by [LithiumSR](https://github.com/lithiumsr/) for Sapienza's Infostud platform. This fork, initiated by [Matypist](https://github.com/matypist/), adapted it to the latest changes in the examination booking system and aims to continue its development.
 
-It was written with Java 8 in mind and it supports Android 6.0+ (API Level 23+), at the time of writing it targets Android 11 (API Level 30).
+It was developed with Java 8 and is compatible with Android 6.0+ (API Level 23+) devices. As of the time of writing, it is designed to work with Android 11 (API Level 30).
 
-## Install
+## Useful links
 
-$\to$ <a href="https://github.com/matypist/openstud_client/releases/latest/download/openstud.apk">**Click here to download the latest version's APK file**</a> $\gets$
+- <a href="https://github.com/matypist/openstud_client/releases/latest/download/openstud.apk">**🇬🇧 Download latest version's APK file**</a>
 
-$\to$ <a href="https://github.com/matypist/openstud_client/releases/latest/download/openstud.apk">**Clicca qui per scaricare l'APK dell'ultima versione**</a> $\gets$
+  <a href="https://github.com/matypist/openstud_client/releases/latest/download/openstud.apk">**🇮🇹 Scarica l'APK della versione più recente**</a>
+
+- <a href="https://t.me/OpenStud">**🇬🇧 Join the Telegram channel to not miss any app updates**</a>
+
+  <a href="https://t.me/OpenStud">**🇮🇹 Entra nel canale Telegram per non perderti eventuali aggiornamenti**</a>
+
+- <a href="https://t.me/OpenStud">**🇬🇧 Join the Telegram Group to chat about it**</a>
+
+  <a href="https://t.me/OpenStud">**🇮🇹 Entra nel gruppo Telegram per parlarne insieme a noi**</a>
 
 ## Features
 
-OpenStud out of the box supports every feature which was present in the old Infostud Mobile app but it comes with a new look and modern code.
-
-The features that are supported are:
-- Student authentication (as expected);
-- Get student profile (first name, last name, date of birth and so on and so forth);
-- Get passed exams;
-- Get doable exams;
-- Get active reservations;
-- Get available reservations;
-- Compilation of the class' survey;
-- Delete of an active reservation;
-- Get and store a receipt of an active reservation;
-- Get paid/unpaid taxes;
-- Show stats based on student's performance;
-- Get university's events and last news;
-- Find classrooms and check their availability;
-- Calendar with student's lessons, exams and reservations.
-
-## What's next?
-
-OpenStud is stable and it's perfectly working, but it's development is far from over.\
-Some visual bugs needs to be fixed and some new features will be worked on (like biometrics support and widgets).
+OpenStud out of the box supports almost every feature that was present in the old Infostud Mobile app, but it comes with a new look and modern code. The supported features include:
+- Student authentication
+- Retrieving student profile information such as first name, last name, and date of birth
+- Accessing information on passed exams
+- Viewing available exams
+- Viewing active reservations
+- Checking for available reservations
+- Compiling class surveys
+- Deleting an active reservation
+- Obtaining and storing a receipt for an active reservation
+- Checking paid/unpaid taxes
+- Displaying statistics based on student performance
+- Accessing university events and latest news
+- Calendar functionality for viewing student's lessons, exams, and reservations
 
 ## Special thanks
 
@@ -46,4 +46,5 @@ Huge thanks to:
 - Luigi Russo who largely contributed to OpenStud Driver's [repo](https://github.com/matypist/openstud_driver);
 - Leonardo Razovic for the icon and logo;
 - Valerio Silvestro that helped LithiumSR testing the app when it was in its infancy;
-- Ugo Possenti who inspired LithiumSR to do this app with his [Medium article](https://medium.com/@MEPoss/ora-infostud-non-fa-più-schifo-21720720e556).
+- Ugo Possenti who inspired LithiumSR to do this app with his [Medium article](https://medium.com/@MEPoss/ora-infostud-non-fa-più-schifo-21720720e556);
+- People who [reported bugs](https://github.com/matypist/openstud_client/issues/new?title=[ISSUE]%20Please%20choose%20a%20title%20for%20this%20issue&body=Please%20describe%20the%20issue%20in%20detail%20here.%20Thanks%20in%20advance!) or [suggested new features or improvements](https://github.com/matypist/openstud_client/issues/new?title=[FEATURE%20REQUEST]%20Please%20choose%20a%20title%20for%20this%20feature%20request&body=Please%20describe%20the%20request%20in%20detail%20here.%20Thanks%20in%20advance!).
