@@ -183,8 +183,7 @@ public class AvailableReservationsAdapter extends RecyclerView.Adapter<Available
                 iconExpand.setImageResource(R.drawable.ic_expand_more_black_24dp);
             }
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/uuuu");
-            String infos = activity.getResources().getString(R.string.description_reservation, res.getNote());
-            if (!infos.endsWith(".")) infos = infos + ".";
+
             txtName.setText(res.getExamSubject());
             txtTeacher.setText(activity.getResources().getString(R.string.teacher_reservation, res.getTeacher()));
             txtDate.setText(activity.getResources().getString(R.string.date_exam, res.getExamDate().format(formatter)));
@@ -198,66 +197,70 @@ public class AvailableReservationsAdapter extends RecyclerView.Adapter<Available
             if (res.getNote() == null || res.getNote().trim().isEmpty())
                 txtInfo.setVisibility(View.GONE);
             else {
+                String infos = activity.getResources().getString(R.string.description_reservation, res.getNote());
+                if (!infos.endsWith(".")) infos = infos + ".";
                 txtInfo.setText(infos);
             }
 
-            LayoutHelper.setColorSrcAtop(chooseAttendingModeSpinner.getBackground(), LayoutHelper.getColorByAttr(activity, R.attr.primaryTextColor, android.R.color.darker_gray));
+            if (!existActiveReservations(res)) {
+                LayoutHelper.setColorSrcAtop(chooseAttendingModeSpinner.getBackground(), LayoutHelper.getColorByAttr(activity, R.attr.primaryTextColor, android.R.color.darker_gray));
 
-            HashMap<String, String> attendingModesHashMap = new HashMap<>();
-            if (res.getAttendingModesList() == null || res.getAttendingModesList().length() == 0)
-                chooseAttendingModeSpinner.setVisibility(View.GONE);
-            else {
-                chooseAttendingModeSpinner.setVisibility(View.VISIBLE);
+                HashMap<String, String> attendingModesHashMap = new HashMap<>();
+                if (res.getAttendingModesList() == null || res.getAttendingModesList().length() == 0)
+                    chooseAttendingModeSpinner.setVisibility(View.GONE);
+                else {
+                    chooseAttendingModeSpinner.setVisibility(View.VISIBLE);
 
-                JSONArray attendingModesJsonArray = res.getAttendingModesList();
+                    JSONArray attendingModesJsonArray = res.getAttendingModesList();
 
-                ArrayList<String> attendingModesArrayList = new ArrayList<>();
+                    ArrayList<String> attendingModesArrayList = new ArrayList<>();
 
-                try {
-                    for (int i = 0; i < attendingModesJsonArray.length(); i++) {
-                        JSONObject scelta = attendingModesJsonArray.getJSONObject(i);
+                    try {
+                        for (int i = 0; i < attendingModesJsonArray.length(); i++) {
+                            JSONObject scelta = attendingModesJsonArray.getJSONObject(i);
 
-                        if(scelta != null) {
-                            String attendingModeTypeDescription;
-                            try {
-                                attendingModeTypeDescription = scelta.getString("descrizioneTipoEsame");
+                            if(scelta != null) {
+                                String attendingModeTypeDescription;
+                                try {
+                                    attendingModeTypeDescription = scelta.getString("descrizioneTipoEsame");
 
-                                attendingModesArrayList.add(attendingModeTypeDescription);
-                            } catch(JSONException ex) {
-                                continue;
-                            }
+                                    attendingModesArrayList.add(attendingModeTypeDescription);
+                                } catch(JSONException ex) {
+                                    continue;
+                                }
 
-                            try {
-                                attendingModesHashMap.put(attendingModeTypeDescription, scelta.getString("tipoEsame"));
-                            } catch(JSONException ex) {
-                                attendingModesArrayList.remove(attendingModeTypeDescription);
+                                try {
+                                    attendingModesHashMap.put(attendingModeTypeDescription, scelta.getString("tipoEsame"));
+                                } catch(JSONException ex) {
+                                    attendingModesArrayList.remove(attendingModeTypeDescription);
+                                }
                             }
                         }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
                     }
-                } catch (JSONException e) {
-                    e.printStackTrace();
+
+                    ArrayAdapter<String> adapterSpinner = new ArrayAdapter<>(activity, android.R.layout.simple_spinner_item, attendingModesArrayList);
+                    adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+                    chooseAttendingModeSpinner.setAdapter(adapterSpinner);
                 }
 
-                ArrayAdapter<String> adapterSpinner = new ArrayAdapter<>(activity, android.R.layout.simple_spinner_item, attendingModesArrayList);
-                adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-                chooseAttendingModeSpinner.setAdapter(adapterSpinner);
-            }
-
-            final HashMap<String, String> finalAttendingModesHashMap = new HashMap<>(attendingModesHashMap);
-            chooseAttendingModeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    String attendingModeTypeDescription = (String) parent.getItemAtPosition(position);
+                final HashMap<String, String> finalAttendingModesHashMap = new HashMap<>(attendingModesHashMap);
+                chooseAttendingModeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        String attendingModeTypeDescription = (String) parent.getItemAtPosition(position);
 
                     ((TextView) parent.getChildAt(position)).setTextColor(LayoutHelper.getColorByAttr(activity, R.attr.primaryTextColor, android.R.color.darker_gray));
 
-                    res.setAttendingModeType(finalAttendingModesHashMap.get(attendingModeTypeDescription));
-                }
+                        res.setAttendingModeType(finalAttendingModesHashMap.get(attendingModeTypeDescription));
+                    }
 
-                @Override
-                public void onNothingSelected(AdapterView<?> parent) {}
-            });
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {}
+                });
+            } else chooseAttendingModeSpinner.setVisibility(View.GONE);
 
             if (existActiveReservations(res)) {
                 setPlaceButtonEnabled(false, true);

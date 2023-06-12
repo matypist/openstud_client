@@ -100,14 +100,28 @@ public class ActiveReservationsAdapter extends RecyclerView.Adapter<ActiveReserv
     }
 
     class ActiveReservationsHolder extends RecyclerView.ViewHolder implements ExpandableLayout.OnExpansionUpdateListener {
+        @BindView(R.id.spacing1)
+        TextView txtSpacing1;
+        @BindView(R.id.spacing2)
+        TextView txtSpacing2;
+        @BindView(R.id.spacing3)
+        TextView txtSpacing3;
+        @BindView(R.id.deleteReservationTip)
+        TextView txtDeleteReservationTip;
         @BindView(R.id.nameExam)
         TextView txtName;
+        @BindView(R.id.code)
+        TextView txtCode;
+        @BindView(R.id.report)
+        TextView txtReport;
         @BindView(R.id.nameTeacher)
         TextView txtTeacher;
         @BindView(R.id.dateExam)
         TextView txtDate;
         @BindView(R.id.reservationNumber)
         TextView txtNumber;
+        @BindView(R.id.reservationMode)
+        TextView txtMode;
         @BindView(R.id.ssdExam)
         TextView txtSSD;
         @BindView(R.id.cfuExam)
@@ -146,15 +160,30 @@ public class ActiveReservationsAdapter extends RecyclerView.Adapter<ActiveReserv
             }
 
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/uuuu");
-            String infos = context.getResources().getString(R.string.description_reservation, res.getNote());
-            if (!infos.endsWith(".")) infos = infos + ".";
             txtName.setText(res.getExamSubject());
+            txtCode.setText(context.getResources().getString(R.string.teaching_code, String.valueOf(res.getModule())));
+            txtReport.setText(context.getResources().getString(R.string.report_id, String.valueOf(res.getReportID())));
             txtTeacher.setText(context.getResources().getString(R.string.teacher_reservation, res.getTeacher()));
             txtDate.setText(context.getResources().getString(R.string.date_exam, res.getExamDate().format(formatter)));
-            txtNumber.setText(context.getResources().getString(R.string.number_reservation, String.valueOf(res.getReservationNumber())));
             txtSSD.setText(context.getResources().getString(R.string.ssd_exams, res.getSsd()));
             txtCFU.setText(context.getResources().getString(R.string.cfu_exams, String.valueOf(res.getCfu())));
-            txtInfo.setText(infos);
+            txtNumber.setText(context.getResources().getString(R.string.number_reservation, String.valueOf(res.getReservationNumber())));
+
+            if (res.getAttendingMode() == null || res.getAttendingMode().trim().isEmpty())
+                txtMode.setVisibility(View.GONE);
+            else {
+                txtMode.setText(context.getResources().getString(R.string.mode_reservation, res.getAttendingMode()));
+            }
+
+            if (res.getNote() == null || res.getNote().trim().isEmpty())
+                txtInfo.setVisibility(View.GONE);
+            else {
+                String infos = context.getResources().getString(R.string.description_reservation, res.getNote());
+                if (!infos.endsWith(".")) infos = infos + ".";
+                txtInfo.setText(infos);
+            }
+
+            txtDeleteReservationTip.setText(context.getResources().getString(R.string.delete_reservation_tip));
 
             Context wrapper = new ContextThemeWrapper(context, R.style.popupMenuStyle);
             PopupMenu popup = new PopupMenu(wrapper, options);

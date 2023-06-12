@@ -42,9 +42,13 @@
     <string name="payment_date">Payment date: %1$s</string>
     <string name="payment_description">Description: %1$s</string>
     <string name="payment_amount" translatable="false">%1$s €</string>
+    <string name="teaching_code">Code: %1$s</string>
+    <string name="report_id">Record: %1$s</string>
     <string name="cfu_exams" translatable="false">CFU: %1$s</string>
     <string name="ssd_exams" translatable="false">SSD: %1$s</string>
     <string name="number_reservation">Reservation number: %1$s</string>
+    <string name="mode_reservation">Method: %1$s</string>
+    <string name="delete_reservation_tip">To cancel the booking use the three vertical dots</string>
     <string name="teacher_reservation">Teacher: %1$s</string>
     <string name="teacher_event">Teacher: %1$s</string>
     <string name="description_reservation">Notes: %1$s</string>
@@ -58,7 +62,7 @@
     <string name="no_exams_doable_found">No exam was found</string>
     <string name="no_paid_tax_found">No paid tax was found</string>
     <string name="no_unpaid_tax_found">No unpaid tax was found</string>
-    <string name="ok_delete">Reservation successfully deleted</string>
+    <string name="ok_delete">Booking successfully canceled</string>
     <string name="failed_delete">Can\'t cancel the booking! Try again later.</string>
     <string name="failed_get_io">The PDF of the receipt cannot be saved on the device.</string>
     <string name="failed_get_network">Connection error. Unable to download the receipt!</string>
@@ -73,7 +77,7 @@
     <string name="start_date_reservation">Start reservations: %1$s</string>
     <string name="end_date_reservation">End reservations: %1$s</string>
     <string name="channel_reservation">Channel: %1$s</string>
-    <string name="info_extra_reservation_format">Infos: %1$s</string>
+    <string name="info_extra_reservation_format">Info: %1$s</string>
     <string name="place_reservation">Book</string>
     <string name="reservation_error">Can\'t book the exam call. Try again later</string>
     <string name="reservation_ok">Exam call booked successfully</string>

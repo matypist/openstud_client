@@ -83,7 +83,19 @@
                 android:paddingStart="8dp">
 
                 <TextView
-                    android:id="@+id/reservationNumber"
+                    android:id="@+id/spacing1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/backgroundCardColor" />
+
+                <TextView
+                    android:id="@+id/code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/primaryTextColor" />
+
+                <TextView
+                    android:id="@+id/report"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="?attr/primaryTextColor" />
@@ -103,7 +115,37 @@
                     android:textColor="?attr/primaryTextColor" />
 
                 <TextView
+                    android:id="@+id/spacing2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/backgroundCardColor" />
+
+                <TextView
+                    android:id="@+id/reservationNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/primaryTextColor" />
+
+                <TextView
+                    android:id="@+id/reservationMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/primaryTextColor" />
+
+                <TextView
                     android:id="@+id/reservationInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/primaryTextColor" />
+
+                <TextView
+                    android:id="@+id/spacing3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/backgroundCardColor" />
+
+                <TextView
+                    android:id="@+id/deleteReservationTip"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="?attr/primaryTextColor" />
