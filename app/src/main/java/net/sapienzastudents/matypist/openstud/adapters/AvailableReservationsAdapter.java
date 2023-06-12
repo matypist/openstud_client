@@ -252,7 +252,9 @@ public class AvailableReservationsAdapter extends RecyclerView.Adapter<Available
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         String attendingModeTypeDescription = (String) parent.getItemAtPosition(position);
 
-                    ((TextView) parent.getChildAt(position)).setTextColor(LayoutHelper.getColorByAttr(activity, R.attr.primaryTextColor, android.R.color.darker_gray));
+                        if (view instanceof TextView) {
+                            ((TextView) view).setTextColor(LayoutHelper.getColorByAttr(activity, R.attr.primaryTextColor, android.R.color.darker_gray));
+                        }
 
                         res.setAttendingModeType(finalAttendingModesHashMap.get(attendingModeTypeDescription));
                     }
