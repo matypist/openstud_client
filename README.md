@@ -14,13 +14,13 @@ It was developed with Java 8 and is compatible with Android 6.0+ (API Level 23+)
 
   **🇮🇹 [Scarica l'APK della versione più recente](https://github.com/matypist/openstud_client/releases/latest/download/OpenStud.apk)**
 
-- **🇬🇧 [Join](https://t.me/OpenStud) the Telegram channel to not miss any app updates**
+- **🇬🇧 Join the [Telegram channel]((https://t.me/OpenStud)) to be sure to not miss any app updates**
 
-  **🇮🇹 [Entra](https://t.me/OpenStud) nel canale Telegram per non perderti eventuali aggiornamenti**
+  **🇮🇹 Entra nel [canale Telegram](https://t.me/OpenStud) per non perderti eventuali aggiornamenti**
 
-- **🇬🇧 [Join](https://osgroup.sapienzastudents.net) the Telegram Group to chat about it**
+- **🇬🇧 Join the [Telegram Group](https://osgroup.sapienzastudents.net) to chat about it with us**
 
-  **🇮🇹 [Entra](https://osgroup.sapienzastudents.net) nel gruppo Telegram per parlarne insieme a noi**
+  **🇮🇹 Entra nel [gruppo Telegram](https://osgroup.sapienzastudents.net) per parlarne insieme a noi**
 
 ## Features
 
