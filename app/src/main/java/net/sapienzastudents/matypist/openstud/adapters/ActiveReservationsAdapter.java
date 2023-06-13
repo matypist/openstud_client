@@ -16,6 +16,7 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.recyclerview.widget.RecyclerView;
 
 import net.sapienzastudents.matypist.openstud.R;
+import net.sapienzastudents.matypist.openstud.helpers.ClientHelper;
 import net.sapienzastudents.matypist.openstud.helpers.LayoutHelper;
 
 import net.cachapa.expandablelayout.ExpandableLayout;
@@ -183,7 +184,11 @@ public class ActiveReservationsAdapter extends RecyclerView.Adapter<ActiveReserv
                 txtInfo.setText(infos);
             }
 
-            txtDeleteReservationTip.setText(context.getResources().getString(R.string.delete_reservation_tip));
+            if (!ClientHelper.canDeleteReservation(res)) {
+                txtSpacing3.setVisibility(View.GONE);
+                txtDeleteReservationTip.setVisibility(View.GONE);
+            } else
+                txtDeleteReservationTip.setText(context.getResources().getString(R.string.delete_reservation_tip));
 
             Context wrapper = new ContextThemeWrapper(context, R.style.popupMenuStyle);
             PopupMenu popup = new PopupMenu(wrapper, options);
