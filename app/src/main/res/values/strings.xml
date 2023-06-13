@@ -100,7 +100,7 @@
     <string name="pref_header_other">Other</string>
     <string name="delete_pdf">Delete cached PDF files</string>
     <string name="pref_title_stats">Stats</string>
-    <string name="summary_theme">Choose OpenStud theme</string>
+    <string name="summary_theme">Choose OpenStud+ theme</string>
     <string name="key_theme" translatable="false">key_app_theme</string>
     <string name="title_theme">Theme</string>
     <string name="default_laude">Value \"30L\"</string>
@@ -133,7 +133,7 @@
     <string name="twitter" translatable="false">Twitter</string>
     <string name="website" translatable="false">Website</string>
     <string name="not_enrolled">Not enrolled</string>
-    <string name="openstud_logo_content" translatable="false">OpenStud+ logo</string>
+    <string name="openstud_logo_content" translatable="false">OpenStud logo</string>
     <string name="no_value_laude">Laude value can be changed from the settings</string>
     <string name="edit">Edit</string>
     <string name="add_exam">Add exam</string>
@@ -222,7 +222,7 @@
     <string name="biometric_unavailable">Biometric hardware is unavailable. Try again later</string>
     <string name="pref_title_security">Security</string>
     <string name="enable_biometric_login">Enable biometric login</string>
-    <string name="enable_biometric_login_description">Force the user to login using a biometric input (e.g: fingerprint, iris).</string>
+    <string name="enable_biometric_login_description">Allow the user to login using a biometric input (e.g.: fingerprint, iris).</string>
     <string name="warning">Warning</string>
     <string name="biometric_warning">From the next start the app will request a biometric input already configured in the phone settings .\n\nIf no method of input is available this feature will be automatically disabled.</string>
     <string name="biometric_login">Biometric login</string>

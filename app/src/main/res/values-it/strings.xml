@@ -106,7 +106,7 @@
     <string name="pref_header_other">Altro</string>
     <string name="delete_pdf">Cancella PDF ricevute dalla cache</string>
     <string name="pref_title_stats">Statistiche</string>
-    <string name="summary_theme">Scegli un tema per OpenStud</string>
+    <string name="summary_theme">Scegli un tema per OpenStud+</string>
     <string name="title_theme">Tema</string>
     <string name="default_laude">Valore \"30L\"</string>
     <string name="default_laude_ext">Scegli un valore per la lode da usare per generare le statistiche</string>
@@ -210,7 +210,7 @@
     <string name="biometric_unavailable">L\'hardware biometrico non è disponibile. Riprova più tardi</string>
     <string name="pref_title_security">Sicurezza</string>
     <string name="enable_biometric_login">Abilita accesso biometrico</string>
-    <string name="enable_biometric_login_description">Obbliga l\'utente ad accedere utilizzando un sistema biometrico (es: impronta, iride).</string>
+    <string name="enable_biometric_login_description">Permetti l\'accesso biometrico (es. via impronta digitale o iride).</string>
     <string name="warning">Avviso</string>
     <string name="biometric_warning">Dal prossimo avvio l\'applicazione utilizzerà in fase di accesso gli input biometrici configurati dal proprietario nel telefono.\n\nSe nessun input è disponibile la funzionalità verrà automaticamente disattivata.</string>
     <string name="biometric_login">Accesso biometrico</string>
