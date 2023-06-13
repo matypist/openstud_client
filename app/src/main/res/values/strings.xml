@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">OpenStud</string>
+    <string name="app_name">OpenStud+</string>
     <string name="studentId">Student ID</string>
     <string name="password" translatable="false">Password</string>
     <string name="fullname" translatable="false">%1$s %2$s</string>
@@ -133,7 +133,7 @@
     <string name="twitter" translatable="false">Twitter</string>
     <string name="website" translatable="false">Website</string>
     <string name="not_enrolled">Not enrolled</string>
-    <string name="openstud_logo_content" translatable="false">OpenStud logo</string>
+    <string name="openstud_logo_content" translatable="false">OpenStud+ logo</string>
     <string name="no_value_laude">Laude value can be changed from the settings</string>
     <string name="edit">Edit</string>
     <string name="add_exam">Add exam</string>

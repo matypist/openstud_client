@@ -6,7 +6,7 @@
     <string name="library_kapitalize_libraryDescription">Una libreria Kotlin per scrivere automaticamente in maiuscolo i nomi delle persone</string>
     <string name="library_openstud_driver_libraryDescription">Una libreria Java che fornisce un modo semplice per ottenere informazioni dall\'Infostud dell\'Università Sapienza.</string>
     <string name="library_searchbar_libraryDescription">Un\'implementazione migliorata della barra di ricerca in Material Design di mancj per Android</string>
-    <string name="app_name">OpenStud</string>
+    <string name="app_name">OpenStud+</string>
     <string name="studentId">Matricola</string>
     <string name="login">Accedi</string>
     <string name="saveLogin">Ricorda credenziali</string>

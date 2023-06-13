@@ -1,19 +1,17 @@
-OpenStud is a native, opensource and unofficial client for Sapienza University's InfoStud.
-The app implements all the features for managing your student account while at the same time providing an appealing UI.
+OpenStud is an unofficial Open Source client by LithiumSR for Sapienza's Infostud platform.
+This fork, initiated by Matypist, adapted it to the latest changes in the examination booking system and aims to continue its development.
+The app encompasses comprehensive features for effectively managing your student account, coupled with an appealing user interface.
 
-In particular, it allows to:
-
-* Manage your profile.
-* Manage exam reservations.
-* See the results of the exams passed.
-* Download and view the reservation receipts.
-* View statistics (GPA, ECTS and much more) and "forecast" the trend by entering the future results of your exams manually.
-* See the taxes generated but still unpaid and those paid.
-* Find a classroom and provide some info like the lesson that is taking place in it, the position or the timetable.
-* See a calendar with date of exams and lessons all in one place.
-* See the most recent news from the university and the events that will take place.
+In particular, it allows you to:
+* Manage your profile
+* Manage exam reservations
+* See the results of passed exams
+* Download and view reservation receipts
+* View statistics such as GPA, ECTS, and more, and forecast trends by entering future exam results manually
+* View generated taxes (unpaid and paid)
+* See a calendar with exam dates and lessons in one place
+* Stay updated with the latest university news and upcoming events
 * Read your webmail
 * Access your student card
-* Compile OPIS survey to express the student's opinion on the courses.
-* Add widgets to your device's homescreen with to easily check your statistics or upcoming exams.
-
+* Complete OPIS surveys to express your opinion on courses
+* Add widgets to your device's homescreen for easy access to your statistics or upcoming exams.

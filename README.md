@@ -24,7 +24,7 @@ It was developed with Java 8 and is compatible with Android 6.0+ (API Level 23+)
 
 ## Features
 
-OpenStud out of the box supports almost every feature that was present in the old Infostud Mobile app, but it comes with a new look and modern code. The supported features include:
+OpenStud+ out of the box supports almost every feature that was present in the old Infostud Mobile app, but it comes with a new look and modern code. The supported features include:
 - Student authentication
 - Retrieving student profile information such as first name, last name, and date of birth
 - Accessing information on passed exams

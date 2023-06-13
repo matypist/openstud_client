@@ -48,7 +48,7 @@ public class AboutActivity extends MaterialAboutActivity {
     @Nullable
     @Override
     protected CharSequence getActivityTitle() {
-        return "OpenStud";
+        return "OpenStud+";
     }
 
     @Override
