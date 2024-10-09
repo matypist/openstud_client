@@ -34,6 +34,7 @@ public class ContributorsActivity extends MaterialAboutActivity {
         buildContributor(context, appCardBuilder2, "Luigi Russo", getResources().getString(R.string.developer), null, "https://github.com/lrusso96");
         buildContributor(context, appCardBuilder3, "Leonardo Razovic", "Logo designer", "https://www.twitter.com/lrazovic", null);
         buildContributor(context, appCardBuilder4, "Ugo Possenti", "Concept designer", "https://twitter.com/MEPoss", null);
+        buildContributor(context, appCardBuilder5, "Valerio Tonelli", "Tester (08/10/2024)", null, null);
         buildContributor(context, appCardBuilder5, "Valerio Silvestro", "Tester", null, null);
         buildContributor(context, appCardBuilder6, "Emanuele Frasca (x1, 13/06/2023)", "Bug reporters", null, null);
         buildContributor(context, appCardBuilder6, "Alessio Bandiera (x1, 12/06/2023)", "Bug reporters", null, null);
