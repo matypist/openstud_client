@@ -33,8 +33,8 @@
     <string name="library_compactcalendar_authorWebsite" translatable="false">https://github.com/lithiumsr</string>
     <string name="library_compactcalendar_libraryName" translatable="false">CompactCalendarView</string>
     <string name="library_compactcalendar_libraryDescription">An android library which provides a compact calendar view based on SundeepK\'s work</string>
-    <string name="library_compactcalendar_libraryWebsite" translatable="false">https://github.com/lithiumsr/CompactCalendarView</string>
-    <string name="library_compactcalendar_respositoryLink" translatable="false">https://github.com/lithiumsr/CompactCalendarView</string>
+    <string name="library_compactcalendar_libraryWebsite" translatable="false">https://github.com/leosarra/CompactCalendarView</string>
+    <string name="library_compactcalendar_respositoryLink" translatable="false">https://github.com/leosarra/CompactCalendarView</string>
     <string name="library_compactcalendar_libraryVersion" translatable="false">3.1</string>
     <string name="library_compactcalendar_isOpenSource" translatable="false">true</string>
     <string name="library_compactcalendar_classPath" translatable="false">devs.mulham.horizontalcalendar.HorizontalCalendar</string>
@@ -44,8 +44,8 @@
     <string name="library_horizontalcalendar_authorWebsite" translatable="false">https://github.com/lithiumsr</string>
     <string name="library_horizontalcalendar_libraryName" translatable="false">Horizontal-Calendar</string>
     <string name="library_horizontalcalendar_libraryDescription">A material horizontal calendar view for Android based on Mulham-Raee\'s work</string>
-    <string name="library_horizontalcalendar_libraryWebsite" translatable="false">https://github.com/lithiumsr/Horizontal-Calendar</string>
-    <string name="library_horizontalcalendar_respositoryLink" translatable="false">https://github.com/lithiumsr/Horizontal-Calendar</string>
+    <string name="library_horizontalcalendar_libraryWebsite" translatable="false">https://github.com/leosarra/Horizontal-Calendar</string>
+    <string name="library_horizontalcalendar_respositoryLink" translatable="false">https://github.com/leosarra/Horizontal-Calendar</string>
     <string name="library_horizontalcalendar_libraryVersion" translatable="false">1.3.7</string>
     <string name="library_horizontalcalendar_isOpenSource" translatable="false">true</string>
     <string name="library_horizontalcalendar_classPath" translatable="false">devs.mulham.horizontalcalendar.HorizontalCalendar</string>
@@ -56,8 +56,8 @@
     <string name="library_kapitalize_authorWebsite" translatable="false">https://github.com/lithiumsr</string>
     <string name="library_kapitalize_libraryName" translatable="false">Kapitalize</string>
     <string name="library_kapitalize_libraryDescription">A Kotlin library to automatically capitalize people\'s names </string>
-    <string name="library_kapitalize_libraryWebsite" translatable="false">https://github.com/lithiumsr/kapitalize</string>
-    <string name="library_kapitalize_respositoryLink" translatable="false">https://github.com/lithiumsr/kapitalize</string>
+    <string name="library_kapitalize_libraryWebsite" translatable="false">https://github.com/leosarra/kapitalize</string>
+    <string name="library_kapitalize_respositoryLink" translatable="false">https://github.com/leosarra/kapitalize</string>
     <string name="library_kapitalize_libraryVersion" translatable="false">1.5.3</string>
     <string name="library_kapitalize_isOpenSource" translatable="false">true</string>
     <string name="library_kapitalize_classPath" translatable="false">com.lithium.kapitalize.Kapitalize</string>
@@ -70,7 +70,7 @@
     <string name="library_openstud_driver_libraryDescription">A Java library that provides an easy way to obtain infos from Sapienza University\'s Infostud</string>
     <string name="library_openstud_driver_libraryWebsite" translatable="false">https://github.com/matypist/openstud_driver</string>
     <string name="library_openstud_driver_respositoryLink" translatable="false">https://github.com/matypist/openstud_driver</string>
-    <string name="library_openstud_driver_libraryVersion" translatable="false">0.60.3</string>
+    <string name="library_openstud_driver_libraryVersion" translatable="false">0.60.5</string>
     <string name="library_openstud_driver_isOpenSource" translatable="false">true</string>
     <string name="library_openstud_driver_classPath" translatable="false">matypist.openstud.driver.core.Openstud</string>
 
@@ -80,8 +80,8 @@
     <string name="library_searchbar_authorWebsite" translatable="false">https://github.com/lithiumsr</string>
     <string name="library_searchbar_libraryName" translatable="false">MaterialSearchBar</string>
     <string name="library_searchbar_libraryDescription">An improved implementation of mancj\'s Material Design Search Bar for Android</string>
-    <string name="library_searchbar_libraryWebsite" translatable="false">https://github.com/lithiumsr/materialsearchbar</string>
-    <string name="library_searchbar_respositoryLink" translatable="false">https://github.com/lithiumsr/materialsearchbar</string>
+    <string name="library_searchbar_libraryWebsite" translatable="false">https://github.com/leosarra/materialsearchbar</string>
+    <string name="library_searchbar_respositoryLink" translatable="false">https://github.com/leosarra/materialsearchbar</string>
     <string name="library_searchbar_libraryVersion" translatable="false">0.8.2</string>
     <string name="library_searchbar_isOpenSource" translatable="false">true</string>
     <string name="library_searchbar_classPath" translatable="false">com.mancj.materialsearchbar.MaterialSearchBar</string>

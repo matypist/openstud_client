@@ -85,14 +85,25 @@ public class AboutActivity extends MaterialAboutActivity {
         String latestGitHubReleaseTag = getLatestGitHubReleaseTag();
 
         if(latestGitHubReleaseTag != null && !latestGitHubReleaseTag.equals(BuildConfig.VERSION_NAME)) {
-            Drawable latest_version = new IconicsDrawable(this)
-                    .icon(FontAwesome.Icon.faw_arrow_circle_up)
+            Drawable download_latest_version = new IconicsDrawable(this)
+                    .icon(FontAwesome.Icon.faw_download)
                     .color(tintColor)
                     .sizeDp(20);
 
             appCardBuilder.addItem(new MaterialAboutActionItem.Builder()
-                    .text(getResources().getString(R.string.latest_version))
-                    .icon(latest_version).subText(latestGitHubReleaseTag)
+                    .text(getResources().getString(R.string.download_latest_version))
+                    .icon(download_latest_version).subText(latestGitHubReleaseTag)
+                    .setOnClickAction(() -> ClientHelper.createCustomTab(this, "https://osapk.sapienzastudents.net"))
+                    .build());
+
+            Drawable latest_version_changelog = new IconicsDrawable(this)
+                    .icon(FontAwesome.Icon.faw_info)
+                    .color(tintColor)
+                    .sizeDp(20);
+
+            appCardBuilder.addItem(new MaterialAboutActionItem.Builder()
+                    .text(getResources().getString(R.string.latest_version_changelog))
+                    .icon(latest_version_changelog).subText(latestGitHubReleaseTag)
                     .setOnClickAction(() -> ClientHelper.createCustomTab(this, "https://github.com/matypist/openstud_client/releases/latest"))
                     .build());
         }
@@ -156,16 +167,19 @@ public class AboutActivity extends MaterialAboutActivity {
         miscCardBuilder.title(R.string.about)
                 .addItem(new MaterialAboutActionItem.Builder()
                         .text(R.string.fork_telegram_channel)
+                        .subText(R.string.fork_telegram_channel_description)
                         .icon(telegram_channel)
                         .setOnClickAction(() -> ClientHelper.createCustomTab(this, "https://telegram.me/OpenStud"))
                         .build())
                 .addItem(new MaterialAboutActionItem.Builder()
                         .text(R.string.fork_telegram_group)
+                        .subText(R.string.fork_telegram_group_description)
                         .icon(telegram_group)
                         .setOnClickAction(() -> ClientHelper.createCustomTab(this, "https://osgroup.sapienzastudents.net"))
                         .build())
                 .addItem(new MaterialAboutActionItem.Builder()
                         .text(R.string.fork_github)
+                        .subText(R.string.fork_github_description)
                         .icon(github)
                         .setOnClickAction(() -> ClientHelper.createCustomTab(this, "https://www.github.com/matypist/openstud_client"))
                         .build())

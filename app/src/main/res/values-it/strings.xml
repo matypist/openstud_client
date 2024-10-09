@@ -83,15 +83,18 @@
     <string name="reservation_error">Impossibile prenotare l\'appello. Riprova più tardi</string>
     <string name="reservation_ok">Appello prenotato con successo</string>
     <string name="already_placed_reservation">Hai già prenotato questo appello!</string>
-    <string name="fork_telegram_channel">Canale aggiornamenti</string>
-    <string name="fork_telegram_group">Gruppo telegram</string>
-    <string name="fork_github">Codice sorgente</string>
+    <string name="fork_telegram_channel">Canale Telegram</string>
+    <string name="fork_telegram_channel_description">Unisciti per Aggiornamenti sull\'App</string>
+    <string name="fork_telegram_group">Gruppo Telegram</string>
+    <string name="fork_telegram_group_description">Unisciti per Chat e Supporto</string>
+    <string name="fork_github">Repository GitHub</string>
+    <string name="fork_github_description">Codice Sorgente del client OpenStud+</string>
     <string name="fork_maintainer">Maintainer</string>
     <string name="fork_maintainer_email_address">matypist@sapienzastudents.net</string>
     <string name="version">Versione</string>
     <string name="author">Autore</string>
     <string name="question_concerning_openstud">Qualche domanda?</string>
-    <string name="open_source_libs">Librerie open source</string>
+    <string name="open_source_libs">Librerie Open Source</string>
     <string name="no_sessions_found">Nessun appello trovato</string>
     <string name="send_email">Invia un\'e-mail</string>
     <string name="pref_header_stats">Statistiche</string>
@@ -216,7 +219,7 @@
     <string name="biometric_login">Accesso biometrico</string>
     <string name="biometric_login_enable">Abilita accesso biometrico</string>
     <string name="biometric_lockout">Accesso biometrico disattivato a causa di troppi tentativi falliti. Riprova più tardi</string>
-    <string name="send_message">Invia un messaggio</string>
+    <string name="send_message">Invia un messaggio (Telegram)</string>
     <string name="no_write_permission_pdf">Impossibile scaricare la ricevuta senza i permessi di scrittura</string>
     <string name="no_write_permission_pdf_delete">Impossibile eliminare i PDF senza i permessi di scrittura</string>
     <string name="add_custom_lesson">Configura lezioni manualmente</string>
@@ -278,5 +281,6 @@
     <string name="account_blocked_error">Account bloccato. Contattare la segreteria studenti</string>
     <string name="invalid_password_error_with_counter_singular">Credenziali errate. %1$s tentativo rimasto</string>
     <string name="invalid_password_error_with_counter_plural">Credenziali errate. %1$s tentativi rimasti</string>
-    <string name="latest_version">Versione più recente</string>
+    <string name="download_latest_version">Scarica la versione più recente</string>
+    <string name="latest_version_changelog">Changelog ultima versione</string>
 </resources>
