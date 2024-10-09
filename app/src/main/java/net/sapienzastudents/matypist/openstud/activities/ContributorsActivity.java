@@ -33,9 +33,9 @@ public class ContributorsActivity extends MaterialAboutActivity {
         // MaterialAboutCard.Builder appCardBuilder8 = new MaterialAboutCard.Builder();
         buildContributor(context, appCardBuilder1, "Matteo Collica", getResources().getString(R.string.openstud_fork_author), null, "https://github.com/matypist/");
         buildContributor(context, appCardBuilder2, "Leonardo Sarra", getResources().getString(R.string.openstud_author), null, "https://github.com/leosarra/");
-        buildContributor(context, appCardBuilder3, "Luigi Russo", getResources().getString(R.string.developer), null, "https://github.com/lrusso96");
-        buildContributor(context, appCardBuilder4, "Leonardo Razovic", "OpenStud Logo designer", "https://www.twitter.com/lrazovic", null);
-        buildContributor(context, appCardBuilder5, "Ugo Possenti", "OpenStud Concept designer", "https://twitter.com/MEPoss", null);
+        buildContributor(context, appCardBuilder3, "Luigi Russo", getResources().getString(R.string.openstud_developer), null, "https://github.com/lrusso96");
+        buildContributor(context, appCardBuilder4, "Leonardo Razovic", "OpenStud Logo Designer", "https://www.twitter.com/lrazovic", null);
+        buildContributor(context, appCardBuilder5, "Ugo Possenti", "OpenStud Concept Designer", "https://twitter.com/MEPoss", null);
         buildContributor(context, appCardBuilder6, "Valerio Tonelli (08/10/2024)", "OpenStud+ Testers", null, null);
         buildContributor(context, appCardBuilder6, "Valerio Silvestro (OpenStud)", "OpenStud Testers", null, null);
         buildContributor(context, appCardBuilder7, "Emanuele Frasca (13/06/2023)", "OpenStud+ Bug Reporters", null, null);

@@ -92,7 +92,8 @@
     <string name="fork_maintainer">Maintainer</string>
     <string name="fork_maintainer_email_address">matypist@sapienzastudents.net</string>
     <string name="version">Versione</string>
-    <string name="author">Autore</string>
+    <string name="openstud_fork_author">OpenStud+ Maintainer</string>
+    <string name="openstud_author">OpenStud Author</string>
     <string name="question_concerning_openstud">Qualche domanda?</string>
     <string name="open_source_libs">Librerie Open Source</string>
     <string name="no_sessions_found">Nessun appello trovato</string>
@@ -141,7 +142,7 @@
     <string name="add">Aggiungi</string>
     <string name="add_exams">Aggiungi esame</string>
     <string name="contributors">Ringraziamenti</string>
-    <string name="developer">Sviluppatore</string>
+    <string name="openstud_developer">Sviluppatore OpenStud</string>
     <string name="secret_question">Domanda segreta</string>
     <string name="answer">Risposta</string>
     <string name="confirm">Conferma</string>
