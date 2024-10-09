@@ -1,6 +1,7 @@
 package net.sapienzastudents.matypist.openstud.activities;
 
 import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,6 +14,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
 import net.sapienzastudents.matypist.openstud.R;
@@ -52,6 +54,15 @@ public class WebViewActivity extends BaseDataActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        if (webView.canGoBack()) {
+            webView.goBack();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
     @SuppressLint("SetJavaScriptEnabled")
     private void setupWebView(Intent intent) {
         Bundle bdl = intent.getExtras();
@@ -62,28 +73,44 @@ public class WebViewActivity extends BaseDataActivity {
         setTitle(title);
         if (subtitle != null) toolbar.setSubtitle(subtitle);
         client = new WebViewClient() {
-
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 String url = request.getUrl().toString();
-                if (url.startsWith("intent://")) {
+                if (url.startsWith("intent://") || url.startsWith("tg:resolve")) {
                     try {
                         Context context = view.getContext();
                         Intent intent = Intent.parseUri(url, Intent.URI_INTENT_SCHEME);
                         if (intent != null) {
                             view.stopLoading();
-                            PackageManager packageManager = context.getPackageManager();
-                            ResolveInfo info = packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY);
-                            if (info != null) {
-                                context.startActivity(intent);
+
+                            if (!url.startsWith("tg:resolve")) {
+                                PackageManager packageManager = context.getPackageManager();
+                                ResolveInfo info = packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY);
+
+                                if (info != null) {
+                                    context.startActivity(intent);
+                                } else {
+                                    String fallbackUrl = intent.getStringExtra("browser_fallback_url");
+                                    if (fallbackUrl == null || fallbackUrl.isEmpty())
+                                        fallbackUrl = intent.getStringExtra("link");
+                                    if (fallbackUrl != null && !fallbackUrl.isEmpty())
+                                        view.loadUrl(fallbackUrl);
+                                }
+                                return true;
                             } else {
-                                String fallbackUrl = intent.getStringExtra("browser_fallback_url");
-                                if (fallbackUrl == null || fallbackUrl.isEmpty())
-                                    fallbackUrl = intent.getStringExtra("link");
-                                if (fallbackUrl != null && !fallbackUrl.isEmpty())
-                                    view.loadUrl(fallbackUrl);
+                                intent.setPackage("org.telegram.messenger");
+                                try {
+                                    context.startActivity(intent);
+                                } catch (ActivityNotFoundException ex1) {
+                                    intent.setPackage("org.telegram.messenger.web");
+                                    try {
+                                        context.startActivity(intent);
+                                    } catch (ActivityNotFoundException ex2) {
+                                        Toast.makeText(view.getContext(), context.getResources().getString(R.string.telegram_not_found), Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                                return true;
                             }
-                            return true;
                         }
                     } catch (URISyntaxException e) {
                         e.printStackTrace();

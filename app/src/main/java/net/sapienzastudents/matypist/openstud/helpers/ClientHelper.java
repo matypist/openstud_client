@@ -259,6 +259,8 @@ public class ClientHelper {
             if (activity instanceof PaymentsActivity) return;
             Intent intent = new Intent(activity, PaymentsActivity.class);
             activity.startActivity(intent);
+        } else if (item == LayoutHelper.Selection.SAPIENZASTUDENTSNET.getValue()) {
+            ClientHelper.createWebViewActivity(activity, "sapienzastudents.net", activity.getResources().getString(R.string.sapienzastudentsnet_description), "https://sapienzastudents.net", ClientHelper.WebViewType.SAPIENZASTUDENTSNET);
         } else if (item == LayoutHelper.Selection.CALENDAR.getValue()) {
             if (activity instanceof CalendarActivity) return;
             Intent intent = new Intent(activity, CalendarActivity.class);
@@ -538,7 +540,7 @@ public class ClientHelper {
 
 
     public enum WebViewType {
-        EMAIL(0);
+        EMAIL(0), SAPIENZASTUDENTSNET(1);
         private final int value;
 
         WebViewType(int value) {

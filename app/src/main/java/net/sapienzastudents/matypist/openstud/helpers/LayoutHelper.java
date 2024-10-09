@@ -34,6 +34,7 @@ import net.sapienzastudents.matypist.openstud.activities.PaymentsActivity;
 import net.sapienzastudents.matypist.openstud.activities.ProfileActivity;
 import net.sapienzastudents.matypist.openstud.activities.SearchClassroomActivity;
 import net.sapienzastudents.matypist.openstud.activities.StatsActivity;
+import net.sapienzastudents.matypist.openstud.activities.WebViewActivity;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.holder.DimenHolder;
@@ -162,10 +163,11 @@ public class LayoutHelper {
         PrimaryDrawerItem exams = new PrimaryDrawerItem().withIdentifier(Selection.EXAMS.getValue()).withIcon(R.drawable.ic_baseline_class).withName(R.string.exams).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.EXAMS.getValue()).withIconTintingEnabled(true);
         PrimaryDrawerItem stats = new PrimaryDrawerItem().withIdentifier(Selection.STATS.getValue()).withIcon(R.drawable.ic_timeline_black_24dp).withName(R.string.stats).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.STATS.getValue()).withIconTintingEnabled(true);
         PrimaryDrawerItem calendar = new PrimaryDrawerItem().withIdentifier(Selection.CALENDAR.getValue()).withIcon(R.drawable.ic_date_range_black).withName(R.string.calendar).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.CALENDAR.getValue()).withIconTintingEnabled(true);
-        // PrimaryDrawerItem classrooms = new PrimaryDrawerItem().withIdentifier(Selection.CLASSROOMS.getValue()).withIcon(R.drawable.ic_location_city_black_24dp).withName(R.string.classrooms).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.CLASSROOMS.getValue()).withIconTintingEnabled(true);
-        PrimaryDrawerItem events = new PrimaryDrawerItem().withIdentifier(Selection.EVENTS.getValue()).withIcon(R.drawable.ic_stage_24dp).withName(R.string.events).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.EVENTS.getValue()).withIconTintingEnabled(true);
-        PrimaryDrawerItem tax = new PrimaryDrawerItem().withIdentifier(Selection.TAX.getValue()).withIcon(R.drawable.ic_baseline_payment).withName(R.string.payments).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.TAX.getValue()).withIconTintingEnabled(true);
         PrimaryDrawerItem news = new PrimaryDrawerItem().withIdentifier(Selection.NEWS.getValue()).withIcon(R.drawable.ic_newspaper).withName(R.string.news).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.NEWS.getValue()).withIconTintingEnabled(true);
+        PrimaryDrawerItem events = new PrimaryDrawerItem().withIdentifier(Selection.EVENTS.getValue()).withIcon(R.drawable.ic_stage_24dp).withName(R.string.events).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.EVENTS.getValue()).withIconTintingEnabled(true);
+        // PrimaryDrawerItem classrooms = new PrimaryDrawerItem().withIdentifier(Selection.CLASSROOMS.getValue()).withIcon(R.drawable.ic_location_city_black_24dp).withName(R.string.classrooms).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.CLASSROOMS.getValue()).withIconTintingEnabled(true);
+        PrimaryDrawerItem tax = new PrimaryDrawerItem().withIdentifier(Selection.TAX.getValue()).withIcon(R.drawable.ic_baseline_payment).withName(R.string.payments).withTextColor(primaryColor).withIconColor(primaryColor).withSelectable(activityIdentifier == Selection.TAX.getValue()).withIconTintingEnabled(true);
+        PrimaryDrawerItem sapienzastudentsnet = new PrimaryDrawerItem().withIdentifier(Selection.SAPIENZASTUDENTSNET.getValue()).withIcon(R.drawable.sapienzastudentsnet_logo).withTextColor(primaryColor).withIconColor(primaryColor).withName(R.string.sapienzastudentsnet_acronym).withSelectable(false);
         PrimaryDrawerItem settings = new PrimaryDrawerItem().withIdentifier(Selection.SETTINGS.getValue()).withIcon(R.drawable.ic_baseline_settings).withTextColor(primaryColor).withIconColor(primaryColor).withName(R.string.settings).withSelectable(false).withIconTintingEnabled(true);
         PrimaryDrawerItem about = new PrimaryDrawerItem().withIdentifier(Selection.ABOUT.getValue()).withIcon(R.drawable.ic_baseline_info).withTextColor(primaryColor).withIconColor(primaryColor).withName(R.string.about).withSelectable(false).withIconTintingEnabled(true);
         PrimaryDrawerItem exit = new PrimaryDrawerItem().withIdentifier(Selection.EXIT.getValue()).withIcon(R.drawable.ic_baseline_exit_to_app).withTextColor(primaryColor).withIconColor(primaryColor).withName(R.string.exit).withIconTintingEnabled(true);
@@ -174,7 +176,7 @@ public class LayoutHelper {
                 .withActivity(activity)
                 .withToolbar(toolbar)
                 .addDrawerItems(
-                        profile, exams, stats, calendar, news, events, /*classrooms,*/ tax,
+                        profile, exams, stats, calendar, news, events, /*classrooms,*/ tax, sapienzastudentsnet,
                         new DividerDrawerItem(),
                         settings, about, exit
                 ).withOnDrawerListener(ddl)
@@ -209,14 +211,15 @@ public class LayoutHelper {
         else if (activity instanceof CalendarActivity) return Selection.CALENDAR.getValue();
         else if (activity instanceof SearchClassroomActivity)
             return Selection.CLASSROOMS.getValue();
-        else if (activity instanceof PaymentsActivity) return Selection.TAX.getValue();
         else if (activity instanceof NewsActivity) return Selection.NEWS.getValue();
         else if (activity instanceof EventsActivity) return Selection.EVENTS.getValue();
+        else if (activity instanceof PaymentsActivity) return Selection.TAX.getValue();
+        else if (activity instanceof WebViewActivity) return Selection.SAPIENZASTUDENTSNET.getValue();
         else return -1;
     }
 
     public enum Selection {
-        PROFILE(1), EXAMS(2), STATS(3), CALENDAR(4), CLASSROOMS(5), TAX(6), NEWS(7), SETTINGS(8), ABOUT(9), EXIT(10), EVENTS(11);
+        PROFILE(1), EXAMS(2), STATS(3), CALENDAR(4), CLASSROOMS(5), NEWS(6), EVENTS(7), TAX(8), SAPIENZASTUDENTSNET(9), SETTINGS(10), ABOUT(11), EXIT(12);
         private final int value;
 
         Selection(int value) {

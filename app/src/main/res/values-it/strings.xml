@@ -20,6 +20,8 @@
     <string name="profile">Profilo</string>
     <string name="about">Riguardo l\'app</string>
     <string name="settings">Impostazioni</string>
+    <string name="sapienzastudentsnet_acronym">SSN</string>
+    <string name="sapienzastudentsnet_description">Sapienza Students Network</string>
     <string name="stats">Statistiche</string>
     <string name="exams">Esami</string>
     <string name="payments">Tasse</string>
@@ -101,8 +103,6 @@
     <string name="pref_header_stats">Statistiche</string>
     <string name="pref_header_themes">Temi</string>
     <string name="info_extra_reservation_format">Info: %1$s</string>
-
-
     <string name="action_settings">Impostazioni</string>
     <string name="title_activity_settings">Impostazioni</string>
     <string name="pref_ringtone_silent">Silenzioso</string>
@@ -285,4 +285,5 @@
     <string name="invalid_password_error_with_counter_plural">Credenziali errate. %1$s tentativi rimasti</string>
     <string name="download_latest_version">Scarica la versione più recente</string>
     <string name="latest_version_changelog">Changelog ultima versione</string>
+    <string name="telegram_not_found">Telegram deve essere installato sul dispositivo</string>
 </resources>
