@@ -64,9 +64,9 @@
     <string name="delete_reservation">Cancella prenotazione</string>
 
     <string name="isee_not_available">Non dichiarato</string>
-    <string name="blank_username_error">L\'username non può essere lasciato vuoto!</string>
-    <string name="blank_password_error">La password non può essere lasciata vuota!</string>
-    <string name="blank_username_password_error">Username e password non possono essere lasciati vuoti!</string>
+    <string name="blank_username_error">Indica prima una matricola</string>
+    <string name="blank_password_error">Inserisci prima la password</string>
+    <string name="blank_username_password_error">Compila i campi Matricola e Password!</string>
     <string name="expired_password_error">La password è scaduta, è necessario cambiarla!</string>
     <string name="connection_error">Errore di connessione</string>
     <string name="retry">Riprova</string>
@@ -153,8 +153,9 @@
     <string name="invalid_student_id">La matricola non esiste!</string>
     <string name="recovery_ok">La password è stata inviata al tuo indirizzo e-mail di recupero</string>
     <string name="recover_password_details">Rispondi alla domanda segreta per ricevere sul tuo indirizzo e-mail di recupero una nuova password</string>
-    <string name="forgot_password">Hai dimenticato la password?</string>
+    <string name="forgot_password">Recupera password</string>
     <string name="no_recovery">Impossibile recuperare la password. Contatta la segreteria.</string>
+    <string name="app_info">Info sull\'app</string>
     <string name="calendar">Calendario</string>
     <string name="no_events">Nessun evento trovato</string>
     <string name="where_event">Luogo: %1$s</string>

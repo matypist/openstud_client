@@ -24,9 +24,9 @@
     <string name="exit">Logout</string>
     <string name="paid">Paid</string>
     <string name="unpaid">Unpaid</string>
-    <string name="blank_username_error">You can\'t leave the username field blank!</string>
-    <string name="blank_password_error">You can\'t leave the password field blank!</string>
-    <string name="blank_username_password_error">You can\'t leave the username and password fields blank!</string>
+    <string name="blank_username_error">Please enter a Student ID first</string>
+    <string name="blank_password_error">Please enter a password first</string>
+    <string name="blank_username_password_error">Fill in the Student ID and Password fields! </string>
     <string name="expired_password_error">The password is expired and needs to be changed!</string>
     <string name="connection_error">Connection error!</string>
     <string name="retry">Retry</string>
@@ -158,8 +158,9 @@
     <string name="invalid_student_id">Student ID does not exist!</string>
     <string name="recovery_ok">The password was sent to your recovery e-mail address</string>
     <string name="recover_password_details">Answer the security question to receive a new password on your recovery e-mail address</string>
-    <string name="forgot_password">Forgot password?</string>
+    <string name="forgot_password">Password recovery</string>
     <string name="no_recovery">Unable to recover your password. Contact the Student Office.</string>
+    <string name="app_info">App info</string>
     <string name="calendar">Calendar</string>
     <string name="no_events">No events found</string>
     <string name="where_event">Place: %1$s</string>

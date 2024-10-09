@@ -59,6 +59,11 @@ public class LoginActivity extends AppCompatActivity {
         if (!focused) ClientHelper.hideKeyboard(v, getApplication());
     }
 
+    @OnClick(R.id.about)
+    void onClickAbout(View v) {
+        about();
+    }
+
     @OnClick(R.id.recovery)
     void onClickRecovery(View v) {
         if (!ClientHelper.isNetworkAvailable(getApplication())) {
@@ -118,6 +123,11 @@ public class LoginActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+    }
+
+    private void about() {
+        Intent intent = new Intent(this, AboutActivity.class);
+        this.startActivity(intent);
     }
 
     private void recovery() {
