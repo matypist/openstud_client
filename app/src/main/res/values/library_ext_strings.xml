@@ -30,7 +30,7 @@
     <!-- CompactCalendarView section -->
     <string name="define_int_compactcalendar" translatable="false"/>
     <string name="library_compactcalendar_author" translatable="false">Leonardo Sarra</string>
-    <string name="library_compactcalendar_authorWebsite" translatable="false">https://github.com/lithiumsr</string>
+    <string name="library_compactcalendar_authorWebsite" translatable="false">https://github.com/leosarra</string>
     <string name="library_compactcalendar_libraryName" translatable="false">CompactCalendarView</string>
     <string name="library_compactcalendar_libraryDescription">An android library which provides a compact calendar view based on SundeepK\'s work</string>
     <string name="library_compactcalendar_libraryWebsite" translatable="false">https://github.com/leosarra/CompactCalendarView</string>
@@ -41,7 +41,7 @@
     <!-- HorizontalCalendar section -->
     <string name="define_int_horizontalcalendar" translatable="false"/>
     <string name="library_horizontalcalendar_author" translatable="false">Leonardo Sarra</string>
-    <string name="library_horizontalcalendar_authorWebsite" translatable="false">https://github.com/lithiumsr</string>
+    <string name="library_horizontalcalendar_authorWebsite" translatable="false">https://github.com/leosarra</string>
     <string name="library_horizontalcalendar_libraryName" translatable="false">Horizontal-Calendar</string>
     <string name="library_horizontalcalendar_libraryDescription">A material horizontal calendar view for Android based on Mulham-Raee\'s work</string>
     <string name="library_horizontalcalendar_libraryWebsite" translatable="false">https://github.com/leosarra/Horizontal-Calendar</string>
@@ -53,7 +53,7 @@
     <!-- Kapitalize section -->
     <string name="define_int_kapitalize" translatable="false"/>
     <string name="library_kapitalize_author" translatable="false">Leonardo Sarra</string>
-    <string name="library_kapitalize_authorWebsite" translatable="false">https://github.com/lithiumsr</string>
+    <string name="library_kapitalize_authorWebsite" translatable="false">https://github.com/leosarra</string>
     <string name="library_kapitalize_libraryName" translatable="false">Kapitalize</string>
     <string name="library_kapitalize_libraryDescription">A Kotlin library to automatically capitalize people\'s names </string>
     <string name="library_kapitalize_libraryWebsite" translatable="false">https://github.com/leosarra/kapitalize</string>
@@ -77,7 +77,7 @@
     <!-- MaterialSearchBar section -->
     <string name="define_int_searchbar" translatable="false"/>
     <string name="library_searchbar_author" translatable="false">Leonardo Sarra</string>
-    <string name="library_searchbar_authorWebsite" translatable="false">https://github.com/lithiumsr</string>
+    <string name="library_searchbar_authorWebsite" translatable="false">https://github.com/leosarra</string>
     <string name="library_searchbar_libraryName" translatable="false">MaterialSearchBar</string>
     <string name="library_searchbar_libraryDescription">An improved implementation of mancj\'s Material Design Search Bar for Android</string>
     <string name="library_searchbar_libraryWebsite" translatable="false">https://github.com/leosarra/materialsearchbar</string>

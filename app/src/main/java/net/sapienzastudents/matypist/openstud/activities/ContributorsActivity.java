@@ -37,7 +37,7 @@ public class ContributorsActivity extends MaterialAboutActivity {
         buildContributor(context, appCardBuilder4, "Leonardo Razovic", "OpenStud Logo Designer", "https://www.twitter.com/lrazovic", null);
         buildContributor(context, appCardBuilder5, "Ugo Possenti", "OpenStud Concept Designer", "https://twitter.com/MEPoss", null);
         buildContributor(context, appCardBuilder6, "Valerio Tonelli (08/10/2024)", "OpenStud+ Testers", null, null);
-        buildContributor(context, appCardBuilder6, "Valerio Silvestro (OpenStud)", "OpenStud Testers", null, null);
+        buildContributor(context, appCardBuilder6, "Valerio Silvestro (OpenStud)", "OpenStud+ Testers", null, null);
         buildContributor(context, appCardBuilder7, "Emanuele Frasca (13/06/2023)", "OpenStud+ Bug Reporters", null, null);
         buildContributor(context, appCardBuilder7, "Alessio Bandiera (12/06/2023)", "OpenStud+ Bug Reporters", null, null);
         buildContributor(context, appCardBuilder7, "Giuseppe Borracci (08/03/2023)", "OpenStud+ Bug Reporters", null, null);

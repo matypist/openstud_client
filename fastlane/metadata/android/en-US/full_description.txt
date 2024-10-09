@@ -1,5 +1,5 @@
-OpenStud is an unofficial Open Source client by LithiumSR for Sapienza's Infostud platform.
-This fork, initiated by Matypist, adapted it to the latest changes in the examination booking system and aims to continue its development.
+OpenStud is an unofficial Open Source client by Leonardo Sarra for Sapienza's Infostud platform.
+This fork, initiated by Matteo Collica, adapted it to the latest changes in the examination booking system, in the login endpoint and aims to continue its development.
 The app encompasses comprehensive features for effectively managing your student account, coupled with an appealing user interface.
 
 In particular, it allows you to:
@@ -9,7 +9,7 @@ In particular, it allows you to:
 * Download and view reservation receipts
 * View statistics such as GPA, ECTS, and more, and forecast trends by entering future exam results manually
 * View generated taxes (unpaid and paid)
-* See a calendar with exam dates and lessons in one place
+* See a calendar with exam dates
 * Stay updated with the latest university news and upcoming events
 * Read your webmail
 * Access your student card
