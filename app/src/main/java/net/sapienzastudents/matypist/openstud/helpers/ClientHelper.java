@@ -249,7 +249,7 @@ public class ClientHelper {
         else title = "Exam: " + res.getExamSubject();
         intent.putExtra(CalendarContract.Events.TITLE, title);
         intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
-                timestamp.getTime() * 1000L);
+                (timestamp.getTime() + 1000) * 1000L);
         intent.putExtra(CalendarContract.Events.ALL_DAY, true);
         activity.startActivity(intent);
     }
