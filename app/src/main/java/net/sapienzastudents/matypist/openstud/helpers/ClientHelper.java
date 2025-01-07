@@ -247,9 +247,11 @@ public class ClientHelper {
         if (Locale.getDefault().getLanguage().equals("it"))
             title = "Esame: " + res.getExamSubject();
         else title = "Exam: " + res.getExamSubject();
-        intent.putExtra(CalendarContract.Events.TITLE, title);
-        intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
-                (timestamp.getTime() + 1000) * 1000L);
+        long startTime = timestamp.getTime() * 1000L; // Convert to milliseconds
+        long endTime = startTime + (24 * 60 * 60 * 1000L); // One day later in milliseconds
+
+        intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime);
+        intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
         intent.putExtra(CalendarContract.Events.ALL_DAY, true);
         activity.startActivity(intent);
     }
