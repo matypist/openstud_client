@@ -28,7 +28,11 @@
             android:name="net.sapienzastudents.matypist.openstud.activities.WebViewActivity"
             android:label="@string/title_activity_web_view"
             android:theme="@style/NoActionBarAppLightTheme"
-            android:configChanges="orientation|screenSize"/>
+            android:configChanges="orientation|screenSize|uiMode"/>
+
+        <meta-data
+                android:name="androidx.webkit.WebView.POWERS_NIGHT_MODE_DEFAULT"
+                android:value="ENABLE" />
 
         <receiver
             android:name="net.sapienzastudents.matypist.openstud.widgets.ExamsWidget"
