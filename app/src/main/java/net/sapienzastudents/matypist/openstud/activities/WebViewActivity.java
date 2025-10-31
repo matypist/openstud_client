@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebResourceRequest;
@@ -17,10 +18,13 @@ import android.webkit.WebViewClient;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
+import androidx.webkit.WebSettingsCompat;
+import androidx.webkit.WebViewFeature;
 import net.sapienzastudents.matypist.openstud.R;
 import net.sapienzastudents.matypist.openstud.data.InfoManager;
 import net.sapienzastudents.matypist.openstud.helpers.ClientHelper;
 import net.sapienzastudents.matypist.openstud.helpers.LayoutHelper;
+import net.sapienzastudents.matypist.openstud.helpers.ThemeEngine;
 
 import java.net.URISyntaxException;
 
@@ -132,6 +136,8 @@ public class WebViewActivity extends BaseDataActivity {
                 super.onPageFinished(view, url);
                 if (progressBar.getVisibility() == View.VISIBLE)
                     progressBar.setVisibility(View.INVISIBLE);
+
+                // Inject credentials if needed
                 inject(view, url, type);
             }
 
@@ -140,6 +146,32 @@ public class WebViewActivity extends BaseDataActivity {
         webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true);
+
+        // Configure the WebView engine to report 'prefers-color-scheme: dark'
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) { // API 29+
+            boolean isAppThemeDark = !ThemeEngine.isLightTheme(this);
+
+            // Use web theme only (respect CSS), disable algorithmic darkening
+            if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK_STRATEGY)) {
+                WebSettingsCompat.setForceDarkStrategy(webView.getSettings(),
+                        WebSettingsCompat.DARK_STRATEGY_WEB_THEME_DARKENING_ONLY);
+            }
+
+            // Set the dark mode state
+            if (WebViewFeature.isFeatureSupported(WebViewFeature.FORCE_DARK)) {
+                WebSettingsCompat.setForceDark(webView.getSettings(),
+                        isAppThemeDark ? WebSettingsCompat.FORCE_DARK_ON : WebSettingsCompat.FORCE_DARK_OFF);
+            }
+
+            // Handle API 33 (Android 13) and higher specific setting
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                // This disables algorithmic darkening to force respect for CSS.
+                // It must co-exist with WebSettingsCompat.setForceDark.
+                webView.getSettings().setAlgorithmicDarkeningAllowed(false);
+            }
+        }
+        // No support for WebView dark mode on API < 29
+
         webView.setWebViewClient(client);
     }
 
@@ -187,7 +219,6 @@ public class WebViewActivity extends BaseDataActivity {
             default:
                 throw new IllegalArgumentException("Provider not supported");
         }
-
     }
 
     @Override
