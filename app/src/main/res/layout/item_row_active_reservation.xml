@@ -53,6 +53,12 @@
             android:orientation="vertical"
             android:paddingStart="8dp">
             <TextView
+                android:id="@+id/channelReservation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/primaryTextColor" />
+
+            <TextView
                 android:id="@+id/nameTeacher"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,6 +66,13 @@
 
             <TextView
                 android:id="@+id/dateExam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/primaryTextColor" />
+
+            <TextView
+                android:id="@+id/reservationInfo"
+                android:textIsSelectable="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="?attr/primaryTextColor" />
@@ -121,6 +134,18 @@
                     android:textColor="?attr/backgroundCardColor" />
 
                 <TextView
+                        android:id="@+id/reservationDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/primaryTextColor" />
+
+                <TextView
+                        android:id="@+id/reservationDeadline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/primaryTextColor" />
+
+                <TextView
                     android:id="@+id/reservationNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -128,13 +153,6 @@
 
                 <TextView
                     android:id="@+id/reservationMode"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="?attr/primaryTextColor" />
-
-                <TextView
-                    android:id="@+id/reservationInfo"
-                    android:textIsSelectable="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="?attr/primaryTextColor" />

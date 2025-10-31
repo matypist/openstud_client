@@ -117,8 +117,14 @@ public class ActiveReservationsAdapter extends RecyclerView.Adapter<ActiveReserv
         TextView txtReport;
         @BindView(R.id.nameTeacher)
         TextView txtTeacher;
+        @BindView(R.id.channelReservation)
+        TextView txtChannel;
         @BindView(R.id.dateExam)
         TextView txtDate;
+        @BindView(R.id.reservationDate)
+        TextView txtReservationDate;
+        @BindView(R.id.reservationDeadline)
+        TextView txtReservationDeadline;
         @BindView(R.id.reservationNumber)
         TextView txtNumber;
         @BindView(R.id.reservationMode)
@@ -164,10 +170,15 @@ public class ActiveReservationsAdapter extends RecyclerView.Adapter<ActiveReserv
             txtName.setText(res.getExamSubject());
             txtCode.setText(context.getResources().getString(R.string.teaching_code, String.valueOf(res.getModule())));
             txtReport.setText(context.getResources().getString(R.string.report_id, String.valueOf(res.getReportID())));
+            txtChannel.setText(context.getResources().getString(R.string.channel_reservation, res.getChannel()));
             txtTeacher.setText(context.getResources().getString(R.string.teacher_reservation, res.getTeacher()));
             txtDate.setText(context.getResources().getString(R.string.date_exam, res.getExamDate().format(formatter)));
+
             txtSSD.setText(context.getResources().getString(R.string.ssd_exams, res.getSsd()));
             txtCFU.setText(context.getResources().getString(R.string.cfu_exams, String.valueOf(res.getCfu())));
+
+            txtReservationDate.setText(context.getResources().getString(R.string.reservation_date, res.getReservationDate().format(formatter)));
+            txtReservationDeadline.setText(context.getResources().getString(R.string.end_date_reservation, res.getEndDate().format(formatter)));
             txtNumber.setText(context.getResources().getString(R.string.number_reservation, String.valueOf(res.getReservationNumber())));
 
             if (res.getAttendingMode() == null || res.getAttendingMode().trim().isEmpty())
@@ -184,7 +195,9 @@ public class ActiveReservationsAdapter extends RecyclerView.Adapter<ActiveReserv
                 txtInfo.setText(infos);
             }
 
-            if (!ClientHelper.canDeleteReservation(res)) {
+            final boolean canDelete = ClientHelper.canDeleteReservation(res);
+
+            if (!canDelete) {
                 txtSpacing3.setVisibility(View.GONE);
                 txtDeleteReservationTip.setVisibility(View.GONE);
             } else
@@ -193,6 +206,9 @@ public class ActiveReservationsAdapter extends RecyclerView.Adapter<ActiveReserv
             Context wrapper = new ContextThemeWrapper(context, R.style.popupMenuStyle);
             PopupMenu popup = new PopupMenu(wrapper, options);
             popup.inflate(R.menu.reservation_menu);
+
+            popup.getMenu().findItem(R.id.delete_menu).setVisible(canDelete);
+
             getButton.setCompoundDrawablesWithIntrinsicBounds(LayoutHelper.getDrawableWithColorAttr(context, R.drawable.ic_get_small, R.attr.colorButtonNav, android.R.color.darker_gray), null, null, null);
             options.setOnClickListener(v -> {
                 popup.setOnMenuItemClickListener(menuItem -> {
