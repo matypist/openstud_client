@@ -277,13 +277,62 @@ public class ClientHelper {
         activity.startActivity(intent);
     }
 
-    public static void startDrawerActivity(long item, Activity activity) {
+    public static String getSapienzaStudentsNetUrl(int codeCourse) {
+        String ssnUrl;
+        switch(codeCourse) {
+            // "Applied Computer Science and Artificial Intelligence"
+            case 30786:
+            case 33502:
+                ssnUrl = "https://sapienzastudents.net/acsai/";
+                break;
+
+            // "Informatica" and "Informatica - erogato in modalità prevalentemente a distanza"
+            case 29923:
+            case 29400:
+            case 33503:
+            case 33504:
+                ssnUrl = "https://sapienzastudents.net/it/";
+                break;
+
+            // "Computer Science"
+            case 29932:
+            case 33508:
+                ssnUrl = "https://sapienzastudents.net/compsci/";
+                break;
+
+            // "Cybersecurity"
+            case 29389:
+            case 33516:
+                ssnUrl = "https://sapienzastudents.net/cybersec/";
+                break;
+
+            // "Filosofia"
+            case 30850:
+            case 33525:
+                ssnUrl = "https://sapienzastudents.net/33525/";
+                break;
+
+            // "Filosofia e Intelligenza Artificiale"
+            case 31774:
+            case 33526:
+                ssnUrl = "https://sapienzastudents.net/33526/";
+                break;
+
+            default:
+                ssnUrl = "https://sapienzastudents.net";
+                break;
+        }
+        return ssnUrl;
+    }
+
+    public static void startDrawerActivity(long item, Activity activity, int codeCourse) {
         if (item == LayoutHelper.Selection.TAX.getValue()) {
             if (activity instanceof PaymentsActivity) return;
             Intent intent = new Intent(activity, PaymentsActivity.class);
             activity.startActivity(intent);
         } else if (item == LayoutHelper.Selection.SAPIENZASTUDENTSNET.getValue()) {
-            ClientHelper.createWebViewActivity(activity, "sapienzastudents.net", activity.getResources().getString(R.string.sapienzastudentsnet_description), "https://sapienzastudents.net", ClientHelper.WebViewType.SAPIENZASTUDENTSNET);
+            String ssnUrl = ClientHelper.getSapienzaStudentsNetUrl(codeCourse);
+            ClientHelper.createWebViewActivity(activity, "sapienzastudents.net", activity.getResources().getString(R.string.sapienzastudentsnet_description), ssnUrl, ClientHelper.WebViewType.SAPIENZASTUDENTSNET);
         } else if (item == LayoutHelper.Selection.CALENDAR.getValue()) {
             if (activity instanceof CalendarActivity) return;
             Intent intent = new Intent(activity, CalendarActivity.class);

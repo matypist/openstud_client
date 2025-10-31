@@ -20,7 +20,7 @@
     <string name="profile">Profilo</string>
     <string name="about">Riguardo l\'app</string>
     <string name="settings">Impostazioni</string>
-    <string name="sapienzastudentsnet_acronym">SSN</string>
+    <string name="sapienzastudentsnet_acronym">SSNet</string>
     <string name="sapienzastudentsnet_description">Sapienza Students Network</string>
     <string name="stats">Statistiche</string>
     <string name="exams">Esami</string>
@@ -82,6 +82,7 @@
     <string name="end_date_reservation">Fine prenotazioni: %1$s</string>
     <string name="channel_reservation">Canale: %1$s</string>
     <string name="place_reservation">Prenota</string>
+    <string name="reservation_date">Data prenotazione: %1$s</string>
     <string name="reservation_error">Impossibile prenotare l\'appello. Riprova più tardi</string>
     <string name="reservation_ok">Appello prenotato con successo</string>
     <string name="already_placed_reservation">Hai già prenotato questo appello!</string>

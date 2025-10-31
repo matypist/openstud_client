@@ -18,7 +18,7 @@
     <string name="profile">Profile</string>
     <string name="about">About the app</string>
     <string name="settings">Settings</string>
-    <string name="sapienzastudentsnet_acronym">SSN</string>
+    <string name="sapienzastudentsnet_acronym">SSNet</string>
     <string name="sapienzastudentsnet_description">Sapienza Students Network</string>
     <string name="stats">Stats</string>
     <string name="exams">Exams</string>
@@ -81,6 +81,7 @@
     <string name="channel_reservation">Channel: %1$s</string>
     <string name="info_extra_reservation_format">Info: %1$s</string>
     <string name="place_reservation">Book</string>
+    <string name="reservation_date">Reservation date: %1$s</string>
     <string name="reservation_error">Can\'t book the exam call. Try again later</string>
     <string name="reservation_ok">Exam call booked successfully</string>
     <string name="already_placed_reservation">You already booked this exam call!</string>
@@ -98,7 +99,7 @@
     <string name="send_email">Send an e-mail</string>
     <string name="question_concerning_openstud">Any question?</string>
     <string name="open_source_libs">Open Source Libraries</string>
-    <string name="no_sessions_found">No sessions found</string>
+    <string name="no_sessions_found">No exam calls found</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_settings" tools:ignore="MissingTranslation">Settings</string>
     <string name="pref_ringtone_silent" tools:ignore="MissingTranslation">Silent</string>

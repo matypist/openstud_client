@@ -149,13 +149,17 @@ public class LayoutHelper {
     }
 
     public static Drawer applyDrawer(Activity activity, Toolbar toolbar, Student student) {
+        int codeCourse = -1;
+        if(student != null) codeCourse = student.getCodeCourse();
+        int finalCodeCourse = codeCourse;
+
         int primaryColor = ThemeEngine.getPrimaryTextColor(activity);
         DelayedDrawerListener ddl = new DelayedDrawerListener() {
             @Override
             public void onDrawerClosed(@NonNull View drawerView) {
                 long item = getItemPressedAndReset();
                 if (item == -1) return;
-                ClientHelper.startDrawerActivity(item, activity);
+                ClientHelper.startDrawerActivity(item, activity, finalCodeCourse);
             }
         };
         int activityIdentifier = LayoutHelper.getIdentifier(activity);
