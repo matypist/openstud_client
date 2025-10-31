@@ -239,18 +239,41 @@ public class ClientHelper {
     }
 
     public static void addReservationToCalendar(Activity activity, final ExamReservation res) {
-        ZoneId zoneId = ZoneId.systemDefault();
-        Timestamp timestamp = new Timestamp(res.getExamDate().atStartOfDay(zoneId).toEpochSecond());
+        // Determine the event title based on the device's default language
+        final String title;
+        if (Locale.getDefault().getLanguage().equals("it")) {
+            title = "Esame: " + res.getExamSubject();
+        } else {
+            title = "Exam: " + res.getExamSubject();
+        }
+
+        // Get the start of the exam day (00:00:00) in the user's local timezone
+        final ZoneId zoneId = ZoneId.systemDefault();
+        final long startTime = res.getExamDate().atStartOfDay(zoneId).toInstant().toEpochMilli();
+
+        // Calculate the end time. For an ALL_DAY event, the end time is exclusive.
+        // To make an event span one full day (e.g., all of October 31st),
+        // the start time must be 00:00 on Oct 31st and the end time
+        // must be 00:00 on November 1st. This is why we add exactly 24 hours.
+        //
+        // See official Android documentation:
+        // https://developer.android.com/guide/topics/providers/calendar-provider#all-day-events
+        final long endTime = startTime + (24 * 60 * 60 * 1000L); // Add one full day in milliseconds
+
+        // Create the intent to open the user's calendar application to the "edit event" screen
         Intent intent = new Intent(Intent.ACTION_EDIT);
         intent.setType("vnd.android.cursor.item/event");
-        String title;
-        if (Locale.getDefault().getLanguage().equals("it"))
-            title = "Esame: " + res.getExamSubject();
-        else title = "Exam: " + res.getExamSubject();
-        intent.putExtra(CalendarContract.Events.TITLE, title);
-        intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,
-                timestamp.getTime() * 1000L);
+
+        // Populate the intent with the event details
+        intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime);
+        intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
         intent.putExtra(CalendarContract.Events.ALL_DAY, true);
+        intent.putExtra(CalendarContract.Events.TITLE, title);
+        if (res.getNote() != null || !res.getNote().trim().isEmpty()) {
+            intent.putExtra(CalendarContract.Events.DESCRIPTION, res.getNote());
+        }
+
+        // Launch the calendar app. The user will be able to confirm or cancel the event.
         activity.startActivity(intent);
     }
 
@@ -316,42 +339,39 @@ public class ClientHelper {
         switch (ev.getEventType()) {
             case THEATRE:
             case LESSON: {
-                ZoneId zoneId = ZoneId.systemDefault();
-                Intent intent = new Intent(Intent.ACTION_EDIT);
+                final ZoneId zoneId = ZoneId.systemDefault();
+                final Intent intent = new Intent(Intent.ACTION_EDIT);
                 intent.setType("vnd.android.cursor.item/event");
-                String title;
-                if (ev.getEventType() == EventType.LESSON) title = ev.getTitle();
-                else title = ev.getTitle();
+
+                final String title = ev.getTitle();
                 intent.putExtra(CalendarContract.Events.TITLE, title);
-                Timestamp timestampStart = new Timestamp(ev.getStart().atZone(zoneId).toInstant().toEpochMilli());
-                intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, timestampStart.getTime());
-                if (ev.getEventType() == EventType.LESSON) {
-                    Timestamp timestampEnd = new Timestamp(ev.getEnd().atZone(zoneId).toInstant().toEpochMilli());
-                    intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, timestampEnd.getTime());
+
+                // Use java.time directly
+                final long startTime = ev.getStart().atZone(zoneId).toInstant().toEpochMilli();
+                intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime);
+
+                if (ev.getEventType() == EventType.LESSON && ev.getEnd() != null) {
+                    final long endTime = ev.getEnd().atZone(zoneId).toInstant().toEpochMilli();
+                    intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
                 }
+
                 intent.putExtra(CalendarContract.Events.EVENT_LOCATION, ev.getWhere());
                 intent.putExtra(CalendarContract.Events.ALL_DAY, false);
+
                 activity.startActivity(intent);
                 break;
             }
             case DOABLE:
             case RESERVED: {
-                ZoneId zoneId = ZoneId.systemDefault();
-                Timestamp timestamp = ev.getTimestamp(zoneId);
-                if (timestamp == null) return;
-                Intent intent = new Intent(Intent.ACTION_EDIT);
-                intent.setType("vnd.android.cursor.item/event");
-                String title;
-                if (Locale.getDefault().getLanguage().equals("it"))
-                    title = "Esame: " + ev.getReservation().getExamSubject();
-                else title = "Exam: " + ev.getReservation().getExamSubject();
-                intent.putExtra(CalendarContract.Events.TITLE, title);
-                intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, timestamp.getTime());
-                intent.putExtra(CalendarContract.Events.ALL_DAY, true);
-                activity.startActivity(intent);
+                final ExamReservation res = ev.getReservation();
+                if (res == null || res.getExamDate() == null) {
+                    return;
+                }
+
+                ClientHelper.addReservationToCalendar(activity, res);
+                break;
             }
         }
-
     }
 
     public static List<Lesson> generateLessonsForCustomCourses(List<CustomCourse> courses) {
