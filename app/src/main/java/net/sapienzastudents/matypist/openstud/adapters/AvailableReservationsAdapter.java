@@ -192,8 +192,23 @@ public class AvailableReservationsAdapter extends RecyclerView.Adapter<Available
             txtChannel.setText(activity.getResources().getString(R.string.channel_reservation, res.getChannel()));
             if (res.getYearCourse() != null) {
                 txtYear.setVisibility(View.VISIBLE);
-                txtYear.setText(activity.getResources().getString(R.string.accademic_year_pay, res.getYearCourse()));
-            } else txtYear.setVisibility(View.GONE);
+
+                Object yearObj = res.getYearCourse();
+                String academicYearString;
+
+                try {
+                    // Attempt to parse the year, handles Integer or String
+                    int year = Integer.parseInt(String.valueOf(yearObj));
+                    academicYearString = (year - 1) + "/" + year;
+                } catch (NumberFormatException e) {
+                    // If it's not a parsable integer, use its original string value
+                    academicYearString = String.valueOf(yearObj);
+                }
+
+                txtYear.setText(activity.getResources().getString(R.string.accademic_year_pay, academicYearString));
+            } else {
+                txtYear.setVisibility(View.GONE);
+            }
             if (res.getNote() == null || res.getNote().trim().isEmpty())
                 txtInfo.setVisibility(View.GONE);
             else {

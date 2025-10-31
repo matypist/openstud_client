@@ -76,14 +76,14 @@
             android:paddingEnd="8dp">
 
             <TextView
-                android:id="@+id/nameTeacher"
-                android:layout_width="match_parent"
+                android:id="@+id/channelReservation"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="?attr/primaryTextColor" />
 
             <TextView
-                android:id="@+id/channelReservation"
-                android:layout_width="wrap_content"
+                android:id="@+id/nameTeacher"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="?attr/primaryTextColor" />
 
