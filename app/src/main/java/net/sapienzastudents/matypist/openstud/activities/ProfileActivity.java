@@ -210,6 +210,7 @@ public class ProfileActivity extends BaseDataActivity {
 
     }
 
+    /* Temporarily disable the student card feature due to the "No student card found!" issue
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.action_bar_profile, menu);
@@ -219,6 +220,7 @@ public class ProfileActivity extends BaseDataActivity {
         menu.findItem(R.id.barcode).setIcon(drawable);
         return true;
     }
+    */
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
