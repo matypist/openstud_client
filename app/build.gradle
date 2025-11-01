@@ -8,7 +8,7 @@ static def getDate() {
 
 android {
     flavorDimensions "releaseType"
-    compileSdkVersion 30
+    compileSdkVersion 33
     defaultConfig {
         applicationId "net.sapienzastudents.matypist.openstud"
         minSdkVersion 23
