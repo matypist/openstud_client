@@ -70,7 +70,7 @@
     <string name="library_openstud_driver_libraryDescription">A Java library that provides an easy way to obtain infos from Sapienza University\'s Infostud</string>
     <string name="library_openstud_driver_libraryWebsite" translatable="false">https://github.com/matypist/openstud_driver</string>
     <string name="library_openstud_driver_respositoryLink" translatable="false">https://github.com/matypist/openstud_driver</string>
-    <string name="library_openstud_driver_libraryVersion" translatable="false">0.61.1</string>
+    <string name="library_openstud_driver_libraryVersion" translatable="false">0.61.3</string>
     <string name="library_openstud_driver_isOpenSource" translatable="false">true</string>
     <string name="library_openstud_driver_classPath" translatable="false">matypist.openstud.driver.core.Openstud</string>
 
