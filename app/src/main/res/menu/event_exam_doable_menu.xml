@@ -5,9 +5,9 @@
         android:id="@+id/calendar_menu"
         android:title="@string/add_calendar_event" />
 
-    <item
+    <!--<item
         android:id="@+id/place_reservation_menu"
-        android:title="@string/place_reservation_event" />
+        android:title="@string/place_reservation_event" />-->
 
 
 </menu>

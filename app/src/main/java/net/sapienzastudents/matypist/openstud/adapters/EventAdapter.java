@@ -84,10 +84,10 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventHolder>
                     case R.id.calendar_menu:
                         eal.addCalendarOnClick(ev);
                         break;
-                    case R.id.place_reservation_menu:
+                    /*case R.id.place_reservation_menu:
                         if (ev.getEventType() == EventType.DOABLE)
                             new Thread(() -> eal.placeReservation(ev, ev.getReservation())).start();
-                        break;
+                        break;*/
                     case R.id.delete_reservation_menu:
                         if (ev.getEventType() == EventType.RESERVED)
                             eal.deleteReservation(ev, ev.getReservation());
