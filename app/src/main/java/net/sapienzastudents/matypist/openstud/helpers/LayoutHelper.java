@@ -201,7 +201,7 @@ public class LayoutHelper {
         View headerLayout = result.getHeader();
         if (student != null) {
             TextView navTitle = headerLayout.findViewById(R.id.nav_title);
-            navTitle.setText(activity.getString(R.string.fullname, student.getFirstName(), student.getLastName()));
+            navTitle.setText(activity.getString(R.string.fullname, student.getDisplayFirstName(), student.getDisplayLastName()));
             TextView navSubtitle = headerLayout.findViewById(R.id.nav_subtitle);
             navSubtitle.setText(student.getStudentID());
         }

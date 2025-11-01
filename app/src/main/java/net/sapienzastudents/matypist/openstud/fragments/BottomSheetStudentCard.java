@@ -174,7 +174,7 @@ public class BottomSheetStudentCard extends BottomSheetDialogFragment {
             barcode.setImageBitmap(finalBmpBarcode);
             subtitle.setVisibility(View.GONE);
             if (finalBmpPhoto != null) photo.setImageBitmap(finalBmpPhoto);
-            fullName.setText(String.format("%s %s", student.getFirstName(), student.getLastName()));
+            fullName.setText(String.format("%s %s", student.getDisplayFirstName(), student.getDisplayLastName()));
             studentId.setText(activity.getResources().getString(R.string.studentId_combo, student.getStudentID()));
             birthDate.setText(activity.getResources().getString(R.string.birthDate_combo, formatter.format(student.getBirthDate())));
             progressLayout.setVisibility(View.GONE);

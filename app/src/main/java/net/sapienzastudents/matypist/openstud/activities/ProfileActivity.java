@@ -157,7 +157,7 @@ public class ProfileActivity extends BaseDataActivity {
     private void applyInfos(Student st, Isee isee) {
         if (st == null) return;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/uuuu");
-        collapsingToolbarLayout.setTitle(st.getFirstName() + " " + st.getLastName());
+        collapsingToolbarLayout.setTitle(st.getDisplayFirstName() + " " + st.getDisplayLastName());
         studentId.setText(st.getStudentID());
         birthDate.setText((st.getBirthDate().format(formatter)));
         birthPlace.setText(st.getBirthPlace());
