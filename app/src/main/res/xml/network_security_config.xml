@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Base config: system CAs -->
+    <base-config>
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+
+    <!-- Config for news.uniroma1.it -->
+    <domain-config>
+        <domain includeSubdomains="true">news.uniroma1.it</domain>
+        <trust-anchors>
+            <certificates src="@raw/news_uniroma1_it"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
