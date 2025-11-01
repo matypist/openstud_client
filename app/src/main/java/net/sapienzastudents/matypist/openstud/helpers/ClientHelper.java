@@ -385,41 +385,65 @@ public class ClientHelper {
     }
 
     public static void addEventToCalendar(Activity activity, final Event ev) {
+        if (ev == null) return;
+
         switch (ev.getEventType()) {
             case THEATRE:
-            case LESSON: {
-                final ZoneId zoneId = ZoneId.systemDefault();
-                final Intent intent = new Intent(Intent.ACTION_EDIT);
-                intent.setType("vnd.android.cursor.item/event");
-
-                final String title = ev.getTitle();
-                intent.putExtra(CalendarContract.Events.TITLE, title);
-
-                // Use java.time directly
-                final long startTime = ev.getStart().atZone(zoneId).toInstant().toEpochMilli();
-                intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime);
-
-                if (ev.getEventType() == EventType.LESSON && ev.getEnd() != null) {
-                    final long endTime = ev.getEnd().atZone(zoneId).toInstant().toEpochMilli();
-                    intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
-                }
-
-                intent.putExtra(CalendarContract.Events.EVENT_LOCATION, ev.getWhere());
-                intent.putExtra(CalendarContract.Events.ALL_DAY, false);
-
-                activity.startActivity(intent);
+            case LESSON:
+                startCalendarActivityForEvent(activity, ev);
                 break;
-            }
+
             case DOABLE:
             case RESERVED: {
                 final ExamReservation res = ev.getReservation();
                 if (res == null || res.getExamDate() == null) {
-                    return;
+                    break;
                 }
-
                 ClientHelper.addReservationToCalendar(activity, res);
                 break;
             }
+        }
+    }
+
+    private static void startCalendarActivityForEvent(Activity activity, final Event ev) {
+        final ZoneId zoneId = ZoneId.systemDefault();
+        final Intent intent = new Intent(Intent.ACTION_EDIT);
+        intent.setType("vnd.android.cursor.item/event");
+
+        intent.putExtra(CalendarContract.Events.TITLE, ev.getTitle());
+        intent.putExtra(CalendarContract.Events.ALL_DAY, false);
+
+        if (ev.getStart() != null) {
+            final long startTime = ev.getStart().atZone(zoneId).toInstant().toEpochMilli();
+            intent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime);
+        }
+
+        if (ev.getEventType() == EventType.LESSON) {
+            if (ev.getEnd() != null) {
+                final long endTime = ev.getEnd().atZone(zoneId).toInstant().toEpochMilli();
+                intent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime);
+            }
+            intent.putExtra(CalendarContract.Events.EVENT_LOCATION, ev.getWhere());
+        } else if (ev.getEventType() == EventType.THEATRE) {
+            intent.putExtra(CalendarContract.Events.DESCRIPTION, ev.getDescription());
+            intent.putExtra(CalendarContract.Events.EVENT_LOCATION, buildLocationString(ev.getRoom(), ev.getWhere()));
+        }
+
+        activity.startActivity(intent);
+    }
+
+    private static String buildLocationString(String room, String where) {
+        final boolean hasRoom = room != null && !room.trim().isEmpty();
+        final boolean hasWhere = where != null && !where.trim().isEmpty();
+
+        if (hasRoom && hasWhere) {
+            return String.format("%s, %s", room, where);
+        } else if (hasRoom) {
+            return room;
+        } else if (hasWhere) {
+            return where;
+        } else {
+            return "";
         }
     }
 
