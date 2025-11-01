@@ -32,7 +32,7 @@
     <string name="payment_number">Bollettino n. %1$s</string>
     <string name="payment_number_ext">Numero bollettino: %1$s</string>
     <string name="course_code_pay">Codice corso: %1$s</string>
-    <string name="accademic_year_pay">Anno accademico: %1$s</string>
+    <string name="accademic_year_pay">Anno Accademico: %1$s</string>
     <string name="payment_date">Data pagamento: %1$s</string>
     <string name="payment_description">Causale: %1$s</string>
     <string name="exams_completed">Sostenuti</string>
@@ -207,7 +207,7 @@
     <string name="infostud_maintenance">InfoStud è momentaneamente in manutenzione</string>
     <string name="personal_identifier">Codice fiscale</string>
     <string name="events">Eventi</string>
-    <string name="event_theatre_when">Inizio alle ore %1$s</string>
+    <string name="event_theatre_when">Inizia alle ore %1$s</string>
     <string name="event_theatre_where">Presso: %1$s</string>
     <string name="login_no_biometrics_found">Accesso biometrico disattivato perché nessun input biometrico valido è disponibile</string>
     <string name="login_no_biometric_hw_found">Accesso biometrico disattivato per mancanza di un sensore biometrico</string>

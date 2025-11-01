@@ -9,7 +9,7 @@
     <string name="course">Course</string>
     <string name="department">Faculty</string>
     <string name="status">Type of registration</string>
-    <string name="year_course">Academic year</string>
+    <string name="year_course">Academic Year</string>
     <string name="birthDate">Date of birth</string>
     <string name="birthPlace">Place of birth</string>
     <string name="year_corse_profile">%1$s year</string>

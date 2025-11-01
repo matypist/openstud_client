@@ -55,7 +55,7 @@
     <string name="library_kapitalize_author" translatable="false">Leonardo Sarra</string>
     <string name="library_kapitalize_authorWebsite" translatable="false">https://github.com/leosarra</string>
     <string name="library_kapitalize_libraryName" translatable="false">Kapitalize</string>
-    <string name="library_kapitalize_libraryDescription">A Kotlin library to automatically capitalize people\'s names </string>
+    <string name="library_kapitalize_libraryDescription">A Kotlin library to automatically capitalize people\'s names</string>
     <string name="library_kapitalize_libraryWebsite" translatable="false">https://github.com/leosarra/kapitalize</string>
     <string name="library_kapitalize_respositoryLink" translatable="false">https://github.com/leosarra/kapitalize</string>
     <string name="library_kapitalize_libraryVersion" translatable="false">1.5.3</string>
