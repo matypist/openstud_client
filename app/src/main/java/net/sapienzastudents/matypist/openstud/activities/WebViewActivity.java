@@ -41,7 +41,6 @@ public class WebViewActivity extends BaseDataActivity {
     @BindView(R.id.progressBar)
     MaterialProgressBar progressBar;
     WebViewClient client;
-    private boolean javascriptInjected = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -195,21 +194,18 @@ public class WebViewActivity extends BaseDataActivity {
         switch (os.getProvider()) {
             case SAPIENZA:
                 if (type == ClientHelper.WebViewType.EMAIL.getValue()) {
-                    if (url.startsWith("https://login.studenti.uniroma1.it") && !url.contains("logout")) {
-                        if (!javascriptInjected) {
-                            view.loadUrl(
-                                    "javascript:(function() { " +
-                                            "setTimeout(function(){" +
-                                            "var studentid = document.getElementById('username');"
-                                            + "var password = document.getElementById('password');"
-                                            + "var login = document.getElementsByName('samlButton');"
-                                            + "if (password == undefined || studentid == undefined || login == undefined || login.length == 0) return;"
-                                            + "studentid.value = '" + student.getStudentID() + "';"
-                                            + "password.value = '" + os.getStudentPassword() + "';"
-                                            + "login[0].click();" +
-                                            "}, 100)})()");
-                        }
-                        javascriptInjected = true;
+                    if ((url.startsWith("https://login.studenti.uniroma1.it") || url.startsWith("https://idp.uniroma1.it")) && !url.contains("logout")) {
+                        view.loadUrl(
+                                "javascript:(function() { " +
+                                        "setTimeout(function(){" +
+                                        "var studentid = document.getElementById('username');"
+                                        + "var password = document.getElementById('password');"
+                                        + "var login = document.getElementsByName('_eventId_proceed');"
+                                        + "if (password == undefined || studentid == undefined || login == undefined || login.length == 0) return;"
+                                        + "studentid.value = '" + student.getStudentID() + "';"
+                                        + "password.value = '" + os.getStudentPassword() + "';"
+                                        + "login[0].click();" +
+                                        "}, 100)})()");
                     } else if (url.contains("logout")) onBackPressed();
                     else view.setVisibility(View.VISIBLE);
                 }
