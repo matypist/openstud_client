@@ -140,6 +140,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventHolder>
                     txtWhere.setVisibility(View.GONE);
                 txtWhere.setText(context.getResources().getString(R.string.where_event, ev.getWhere()));
             } else {
+                txtStartDate.setText(context.getResources().getString(R.string.channel_reservation, ev.getReservation().getChannel()));
                 if (ev.getReservation() == null || ev.getReservation().getNote().trim().isEmpty())
                     txtWhere.setVisibility(View.GONE);
                 txtWhere.setText(context.getResources().getString(R.string.info_extra_reservation_format, ev.getReservation().getNote()));
@@ -153,7 +154,6 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventHolder>
             }
             if (ev.getEventType() == EventType.DOABLE || ev.getEventType() == EventType.RESERVED) {
                 txtName.setText(ev.getTitle());
-                txtStartDate.setVisibility(View.GONE);
                 txtEndDate.setVisibility(View.GONE);
             } else {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
