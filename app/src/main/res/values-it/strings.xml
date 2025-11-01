@@ -11,6 +11,7 @@
     <string name="login">Accedi</string>
     <string name="saveLogin">Ricorda credenziali</string>
     <string name="course">Corso</string>
+    <string name="course_code">Codice Corso</string>
     <string name="department">Facoltà</string>
     <string name="status">Tipo di iscrizione</string>
     <string name="year_course">Anno corso</string>
@@ -64,7 +65,8 @@
     <string name="delete_abort">Annulla</string>
     <string name="receipt">Ricevuta</string>
     <string name="delete_reservation">Cancella prenotazione</string>
-
+    <string name="email_not_activated">Non attivata</string>
+    <string name="personal_email_not_entered">Non inserita</string>
     <string name="isee_not_available">Non dichiarato</string>
     <string name="blank_username_error">Indica prima una matricola</string>
     <string name="blank_password_error">Inserisci prima la password</string>
@@ -149,6 +151,7 @@
     <string name="confirm">Conferma</string>
     <string name="recovery_password">Recupero password</string>
     <string name="email">Casella di posta istituzionale</string>
+    <string name="personal_email">Indirizzo e-mail</string>
     <string name="recovery_email">E-mail di recupero</string>
     <string name="invalid_answer">La risposta non è corretta!</string>
     <string name="invalid_student_id">La matricola non esiste!</string>

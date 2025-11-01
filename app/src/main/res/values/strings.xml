@@ -7,6 +7,7 @@
     <string name="saveLogin">Remember me</string>
     <string name="title_activity_profile" translatable="false">ProfileActivity</string>
     <string name="course">Course</string>
+    <string name="course_code">Course Code</string>
     <string name="department">Faculty</string>
     <string name="status">Type of registration</string>
     <string name="year_course">Academic Year</string>
@@ -36,6 +37,8 @@
     <string name="user_not_enabled_error">User not allowed to manage InfoStud</string>
     <string name="invalid_password_error">Invalid credentials!</string>
     <string name="device_no_internet">Your device is not connected to internet</string>
+    <string name="email_not_activated">Not activated</string>
+    <string name="personal_email_not_entered">Not entered</string>
     <string name="isee_not_available">Not available</string>
     <string name="payment_number">Payment n. %1$s</string>
     <string name="payment_number_ext">Payment number: %1$s</string>
@@ -156,6 +159,7 @@
     <string name="confirm">Confirm</string>
     <string name="recovery_password">Password recovery</string>
     <string name="email">Institutional mailbox</string>
+    <string name="personal_email">Personal e-mail</string>
     <string name="recovery_email">Recovery e-mail</string>
     <string name="invalid_answer">The answer is not correct!</string>
     <string name="invalid_student_id">Student ID does not exist!</string>

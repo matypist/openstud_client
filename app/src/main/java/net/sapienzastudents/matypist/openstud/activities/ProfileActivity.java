@@ -66,10 +66,16 @@ public class ProfileActivity extends BaseDataActivity {
     TextView birthPlace;
     @BindView(R.id.isee)
     TextView isee_field;
+    @BindView(R.id.email)
+    TextView email_field;
+    @BindView(R.id.personal_email_field)
+    TextView personal_email_field;
     @BindView(R.id.departmentDescription)
     TextView departmentDescription;
     @BindView(R.id.courseDescription)
     TextView courseDescription;
+    @BindView(R.id.courseCode)
+    TextView courseCode;
     @BindView(R.id.courseYear)
     TextView courseYear;
     @BindView(R.id.studentStatus)
@@ -164,9 +170,16 @@ public class ProfileActivity extends BaseDataActivity {
         socialSecurityNumber.setText(st.getSocialSecurityNumber());
         if (isee == null) isee_field.setText(getResources().getString(R.string.isee_not_available));
         else isee_field.setText(String.valueOf(isee.getValue()));
+        String email = st.getEmail();
+        if (email == null) email_field.setText(getResources().getString(R.string.email_not_activated));
+        else email_field.setText(email);
+        String personalEmail = st.getPersonalEmail();
+        if (personalEmail == null) personal_email_field.setText(getResources().getString(R.string.personal_email_not_entered));
+        else personal_email_field.setText(personalEmail);
         if (st.getCourseName() != null && !st.getCourseName().equals("")) {
             departmentDescription.setText(st.getDepartmentName());
             courseDescription.setText(st.getCourseName());
+            courseCode.setText(String.valueOf(st.getCodeCourse()));
             if (Locale.getDefault().getLanguage().equals("it"))
                 courseYear.setText(getResources().getString(R.string.year_corse_profile, st.getCourseYear() + "°"));
             else {
@@ -184,6 +197,7 @@ public class ProfileActivity extends BaseDataActivity {
             cfu.setText(String.valueOf(st.getCfu()));
         } else {
             courseDescription.setText(getResources().getString(R.string.not_enrolled));
+            courseCode.setText(getResources().getString(R.string.not_enrolled));
             LinearLayout linearLayout = findViewById(R.id.course_extra_info);
             linearLayout.setVisibility(View.GONE);
         }
