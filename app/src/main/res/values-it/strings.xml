@@ -4,7 +4,7 @@
     <string name="library_compactcalendar_libraryDescription">Una libreria per Android che fornisce una visualizzazione compatta del calendario, basata sul lavoro di SundeepK</string>
     <string name="library_horizontalcalendar_libraryDescription">Una visualizzazione material del calendario orizzontale per Android, basata sul lavoro di Mulham-Raee</string>
     <string name="library_kapitalize_libraryDescription">Una libreria Kotlin per scrivere automaticamente in maiuscolo i nomi delle persone</string>
-    <string name="library_openstud_driver_libraryDescription">Una libreria Java che fornisce un modo semplice per ottenere informazioni dall\'Infostud dell\'Università Sapienza.</string>
+    <string name="library_openstud_driver_libraryDescription">Una libreria Java che fornisce un modo semplice per ottenere informazioni da Infostud di Sapienza Università di Roma</string>
     <string name="library_searchbar_libraryDescription">Un\'implementazione migliorata della barra di ricerca in Material Design di mancj per Android</string>
     <string name="app_name">OpenStud+</string>
     <string name="studentId">Matricola</string>
@@ -239,7 +239,7 @@
     <string name="no_course_added">Nessun corso aggiunto</string>
     <string name="end_lesson_label">Fine lezione</string>
     <string name="start_lesson_label">Inizio lezione</string>
-    <string name="add_custom_lesson_summary">Aggiungi manualmente lezioni da visualizzarle nel calendario</string>
+    <string name="add_custom_lesson_summary">Aggiungi manualmente lezioni da visualizzare nel calendario</string>
     <string name="compile_opis">Compila OPIS</string>
     <string name="code">Codice</string>
     <string name="compile_opis_extended">Compila questionario OPIS</string>

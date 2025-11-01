@@ -40,7 +40,7 @@
     <string name="payment_number">Payment n. %1$s</string>
     <string name="payment_number_ext">Payment number: %1$s</string>
     <string name="course_code_pay">Course code: %1$s</string>
-    <string name="accademic_year_pay">Academic year: %1$s</string>
+    <string name="accademic_year_pay">Academic Year: %1$s</string>
     <string name="payment_date">Payment date: %1$s</string>
     <string name="payment_description">Description: %1$s</string>
     <string name="payment_amount" translatable="false">%1$s €</string>
