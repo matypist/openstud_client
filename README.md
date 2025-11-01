@@ -1,28 +1,31 @@
 ![banner](https://user-images.githubusercontent.com/8293810/46977822-72575800-d0cd-11e8-90d9-6132083a0c33.png)
 
-![GitHub tag](https://img.shields.io/github/tag/matypist/openstud_client.svg)
-[![API](https://img.shields.io/badge/API-30%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=30)
+![GitHub tag](https://img.shields.io/github/v/tag/matypist/openstud_client)
+[![API](https://img.shields.io/badge/API-23%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=30)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-OpenStud is an unofficial Open Source client by [Leonardo Sarra](https://github.com/leosarra/) for Sapienza's Infostud platform. This fork, initiated by [Matteo Collica](https://github.com/matypist/), adapted it to the latest changes in the examination booking system, in the login endpoint and aims to continue its development.
+OpenStud is an **unofficial** Open Source client by [Leonardo Sarra](https://github.com/leosarra/) for Sapienza's Infostud platform. This fork, initiated by [Matteo Collica](https://github.com/matypist/), adapted it to the latest changes in the examination booking system, in the login endpoint and aims to continue its development.
 
-It was developed with Java 8 and is compatible with Android 6.0+ (API Level 23+) devices. As of the time of writing, it is designed to work with Android 11 (API Level 30).
+_It was developed with Java 8, targets Android 13 (API Level 33), and supports devices running Android 6.0 (API Level 23) and above._
 
-## Useful links
+## 🔗 Useful Links / Link Utili
 
-- **🇬🇧 [Download latest version's APK file](https://github.com/matypist/openstud_client/releases/latest/download/OpenStud.apk)**
+### 📥 Download APK
+| English | Italiano |
+|---------|----------|
+| [Download latest version's APK](https://github.com/matypist/openstud_client/releases/latest/download/OpenStud.apk) | [Scarica l'APK della versione più recente](https://github.com/matypist/openstud_client/releases/latest/download/OpenStud.apk) |
 
-  **🇮🇹 [Scarica l'APK della versione più recente](https://github.com/matypist/openstud_client/releases/latest/download/OpenStud.apk)**
+### 📣 Telegram Channel
+| English | Italiano |
+|---------|----------|
+| [Join the Telegram channel](https://t.me/OpenStud) to not miss any app updates | [Entra nel canale Telegram](https://t.me/OpenStud) per non perderti futuri aggiornamenti dell'app |
 
-- **🇬🇧 Join the [Telegram channel](https://t.me/OpenStud) to be sure to not miss any app updates**
+### 💬 Telegram Group
+| English | Italiano |
+|---------|----------|
+| [Join the Telegram Group](https://osgroup.sapienzastudents.net) for chat and support | [Entra nel gruppo Telegram](https://osgroup.sapienzastudents.net) per chat e supporto |
 
-  **🇮🇹 Entra nel [canale Telegram](https://t.me/OpenStud) per non perderti futuri aggiornamenti dell'app**
-
-- **🇬🇧 Join the [Telegram Group](https://osgroup.sapienzastudents.net) for chat and support**
-
-  **🇮🇹 Entra nel [gruppo Telegram](https://osgroup.sapienzastudents.net) per chat e supporto**
-
-## Features
+## 🚀 Features
 
 OpenStud+ out of the box supports almost every feature that was present in the old Infostud Mobile app, but it comes with a new look and modern code. The supported features include:
 - Student authentication
@@ -39,7 +42,7 @@ OpenStud+ out of the box supports almost every feature that was present in the o
 - Accessing university events and latest news
 - Calendar functionality for viewing student's exams and reservations
 
-## Special thanks
+## ✨ Special thanks
 
 Huge thanks to:
 - [leosarra](https://github.com/leosarra/) (Leonardo Sarra) who originally conceived, created and maintained this project ([here](https://github.com/leosarra/openstud_client));
